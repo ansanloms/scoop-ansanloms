@@ -1,0 +1,34 @@
+{
+  "homepage": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/",
+  "description": "BDF UM+ Outline - A TrueType bitmap font",
+  "version": "20180613",
+  "license": {
+    "identifier": "Freeware",
+    "url": "http://mplus-fonts.osdn.jp/mplus-bitmap-fonts/#license"
+  },
+  "url": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/downloads/ttf-bdfumplus-outline-20180613.zip",
+  "hash": "b40239aaae3aca534d955c4b73aae69f631039f73779b63e5e1e3ab10335c5c0",
+  "checkver": {
+    "url": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/downloads/",
+    "re": "ttf-bdfumplus-outline-([\\d.]+).zip"
+  },
+  "autoupdate": {
+    "url": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/downloads/ttf-bdfumplus-outline-$version.zip"
+  },
+  "depends": [
+    "sudo",
+    "ps-font-scripts"
+  ],
+  "installer": {
+    "script": [
+      "sudo add-font -path $dir\\compiled\\bdfUMplus-outline.ttf",
+      "sudo add-font -path $dir\\compiled\\bdfUMplus-outline-bold.ttf"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "sudo remove-font -file bdfUMplus-outline.ttf",
+      "sudo remove-font -file bdfUMplus-outline-bold.ttf"
+    ]
+  }
+}
