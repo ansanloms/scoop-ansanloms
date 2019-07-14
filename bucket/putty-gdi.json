@@ -48,7 +48,7 @@
       ]
   ],
   "checkver": {
-    "url": "http://ice.hotmint.com/putty/",
+    "url": "https://ice.hotmint.com/putty/",
     "re": "putty-gdi-([\\d.]+).zip"
   },
   "autoupdate": {
