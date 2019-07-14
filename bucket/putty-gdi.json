@@ -1,0 +1,58 @@
+{
+  "homepage": "https://ice.hotmint.com/putty/",
+  "version": "20180413",
+  "license": "http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html",
+  "architecture": {
+    "64bit": {
+      "url": "https://ice.hotmint.com/putty/putty-gdi-20180413.zip",
+      "hash": "1c5f4cadf9b55c98e49e66d36f5a91bcd9ff5f2c4e6ac03b356eaf0ea8c9b52a",
+      "extract_dir": "putty-gdi-20180413\\x64"
+    },
+    "32bit": {
+      "url": "https://ice.hotmint.com/putty/putty-gdi-20180413.zip",
+      "hash": "1c5f4cadf9b55c98e49e66d36f5a91bcd9ff5f2c4e6ac03b356eaf0ea8c9b52a",
+      "extract_dir": "putty-gdi-20180413"
+    }
+  },
+  "bin": [
+    "pageant.exe",
+    "plink.exe",
+    "pscp.exe",
+    "psftp.exe",
+    "putty.exe",
+    "puttygen.exe",
+    "puttytel.exe"
+  ],
+  "persist": "putty.ini",
+  "pre_install": [
+    "if (!(Test-Path \"$persist_dir\\putty.ini\")) {",
+      "    new-item \"$dir\\putty.ini\" -type file | out-null",
+      "}"
+  ],
+  "shortcuts": [
+    [
+      "putty.exe",
+      "PuTTY"
+      ],
+      [
+        "pageant.exe",
+        "Pageant"
+      ],
+      [
+        "psftp.exe",
+        "PSFTP"
+      ],
+      [
+        "puttygen.exe",
+        "PuTTYgen"
+      ]
+  ],
+  "checkver": {
+    "url": "http://ice.hotmint.com/putty/",
+    "re": "putty-gdi-([\\d.]+).zip"
+  },
+  "autoupdate": {
+    "url": "http://ice.hotmint.com/putty/putty-gdi-$version.zip",
+    "extract_dir": "putty-gdi-$version"
+  }
+}
