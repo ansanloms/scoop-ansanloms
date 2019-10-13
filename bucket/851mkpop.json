@@ -1,0 +1,25 @@
+{
+    "homepage": "https://pm85122.onamae.jp/851mkpop.html",
+    "description": "851マカポップ",
+    "version": "0.02",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://pm85122.onamae.jp/851mkpop.html#readme"
+    },
+    "url": "https://pm85122.onamae.jp/851MkPOP_002.ttf",
+    "hash": "e1decca16969cd3e1f0e459a66c1b890fdd46b8f97d87416b2ce7a65958ec687",
+    "depends": [
+        "sudo",
+        "ps-font-scripts"
+    ],
+    "installer": {
+        "script": [
+            "sudo add-font -path $dir\\851MkPOP_002.ttf"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "sudo remove-font -file 851MkPOP_002.ttf"
+        ]
+    }
+}
