@@ -11,14 +11,17 @@
     "depends": [
         "sudo"
     ],
-    "pre_install": [
-        "invoke-externalcommand -filepath \"$dir\\utau0418e-inst.exe\" -argumentlist \"/q /t:$dir\\tmp /c\" -runas | out-null"
-    ],
     "persist": [
         "plugins",
         "engine",
         "voice",
         "setting.ini"
+    ],
+    "pre_install": [
+        "invoke-externalcommand -filepath \"$dir\\utau0418e-inst.exe\" -argumentlist \"/q /t:$dir\\tmp /c\" -runas | out-null",
+        "if (!(Test-Path \"$persist_dir\\setting.ini\")) {",
+        "    new-item \"$dir\\setting.ini\" -type file | out-null",
+        "}"
     ],
     "installer": {
         "script": [
