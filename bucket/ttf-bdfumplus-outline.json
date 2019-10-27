@@ -6,15 +6,14 @@
         "identifier": "Freeware",
         "url": "http://mplus-fonts.osdn.jp/mplus-bitmap-fonts/#license"
     },
-    "url": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/downloads/ttf-bdfumplus-outline-20180613.zip",
+    "url": "https://github.com/hikaen2/ttf-bdfumplus-outline/releases/download/20180613/ttf-bdfumplus-outline-20180613.zip",
     "hash": "b40239aaae3aca534d955c4b73aae69f631039f73779b63e5e1e3ab10335c5c0",
     "extract_dir": "ttf-bdfumplus-outline-20180613",
     "checkver": {
-        "url": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/downloads/",
-        "re": "ttf-bdfumplus-outline-([\\d.]+).zip"
+        "github": "https://github.com/hikaen2/ttf-bdfumplus-outline"
     },
     "autoupdate": {
-        "url": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/downloads/ttf-bdfumplus-outline-$version.zip",
+        "url": "https://github.com/hikaen2/ttf-bdfumplus-outline/releases/download/$version/ttf-bdfumplus-outline-$version.zip",
         "extract_dir": "ttf-bdfumplus-outline-$version"
     },
     "depends": [
