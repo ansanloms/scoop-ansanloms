@@ -1,25 +1,28 @@
 {
-    "homepage": "https://pm85122.onamae.jp/851mkpop.html",
-    "description": "851マカポップ",
-    "version": "0.02",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://pm85122.onamae.jp/851mkpop.html#readme"
-    },
-    "url": "https://pm85122.onamae.jp/851MkPOP_002.ttf",
-    "hash": "e1decca16969cd3e1f0e459a66c1b890fdd46b8f97d87416b2ce7a65958ec687",
-    "depends": [
-        "sudo",
-        "ps-font-scripts"
-    ],
-    "installer": {
-        "script": [
-            "sudo add-font -path $dir\\851MkPOP_002.ttf"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "sudo remove-font -file 851MkPOP_002.ttf"
-        ]
-    }
+  "homepage": "https://pm85122.onamae.jp/851mkpop.html",
+  "description": "851マカポップ",
+  "version": "0.02",
+  "license": {
+    "identifier": "Freeware",
+    "url": "https://pm85122.onamae.jp/851mkpop.html#readme"
+  },
+  "url": "https://pm85122.onamae.jp/851MkPOP_002.ttf#/851MkPOP.ttf",
+  "hash": "e1decca16969cd3e1f0e459a66c1b890fdd46b8f97d87416b2ce7a65958ec687",
+  "depends": [
+    "sudo",
+    "ps-font-scripts"
+  ],
+  "installer": {
+    "script": "sudo add-font -path $dir\\851MkPOP.ttf"
+  },
+  "uninstaller": {
+    "script": "sudo remove-font -file 851MkPOP.ttf"
+  },
+  "checkver": {
+    "url": "https://pm85122.onamae.jp/851mkpop.html",
+    "regex": "<a href=\"851MkPOP_(?<short>[\\d.]+).ttf\">Ver(?<version>[\\d.]+\\.[\\d.]+)</a>"
+  },
+  "autoupdate": {
+    "url": "https://pm85122.onamae.jp/851MkPOP_$matchShort.ttf#/851MkPOP.ttf"
+  }
 }

@@ -1,25 +1,25 @@
 {
-    "homepage": "http://debugx.net/BugSoft.aspx?Soft=BugMaruGothic",
-    "description": "ばぐまるゴシック",
-    "version": "0.15",
-    "url": "http://debugx.net/Archive/BugMaruGothic015.zip",
-    "hash": "d89e1090698ddb4b1d0c411d79641e884fc689167f4f88b063824941ea7ba7ba",
-    "depends": [
-        "sudo",
-        "ps-font-scripts"
-    ],
-    "installer": {
-        "script": [
-            "sudo add-font -path $dir\\BugMaruGothic.ttc",
-            "sudo add-font -path $dir\\BugMaruPGothic.ttc",
-            "sudo add-font -path $dir\\BugMaruUIGothic.ttc"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "sudo remove-font -file BugMaruGothic.ttc",
-            "sudo remove-font -file BugMaruPGothic.ttc",
-            "sudo remove-font -file BugMaruUIGothic.ttc"
-        ]
-    }
+  "homepage": "http://debugx.net/BugSoft.aspx?Soft=BugMaruGothic",
+  "description": "ばぐまるゴシック",
+  "version": "0.15",
+  "url": "http://debugx.net/Archive/BugMaruGothic015.zip",
+  "hash": "d89e1090698ddb4b1d0c411d79641e884fc689167f4f88b063824941ea7ba7ba",
+  "depends": [
+    "sudo",
+    "ps-font-scripts"
+  ],
+  "installer": {
+    "script": [
+      "sudo add-font -path $dir\\BugMaruGothic.ttc",
+      "sudo add-font -path $dir\\BugMaruPGothic.ttc",
+      "sudo add-font -path $dir\\BugMaruUIGothic.ttc"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "sudo remove-font -file BugMaruGothic.ttc",
+      "sudo remove-font -file BugMaruPGothic.ttc",
+      "sudo remove-font -file BugMaruUIGothic.ttc"
+    ]
+  }
 }

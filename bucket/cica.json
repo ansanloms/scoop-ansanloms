@@ -1,37 +1,37 @@
 {
-    "homepage": "https://miiton.github.io/Cica/",
-    "description": "プログラミング用日本語等幅フォント Cica(シカ)",
-    "version": "5.0.1",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://github.com/miiton/Cica/blob/master/LICENSE.txt"
-    },
-    "url": "https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip",
-    "hash": "b61ae55fb1a4a98dd78e90fe68649bcfaabb20a5eaaffa57c246356890c6b0df",
-    "checkver": {
-        "github": "https://github.com/miiton/Cica"
-    },
-    "autoupdate": {
-        "url": "https://github.com/miiton/Cica/releases/download/v$version/Cica_v$version_with_emoji.zip"
-    },
-    "depends": [
-        "sudo",
-        "ps-font-scripts"
-    ],
-    "installer": {
-        "script": [
-            "sudo add-font -path $dir\\Cica-Regular.ttf",
-            "sudo add-font -path $dir\\Cica-RegularItalic.ttf",
-            "sudo add-font -path $dir\\Cica-Bold.ttf",
-            "sudo add-font -path $dir\\Cica-BoldItalic.ttf"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "sudo remove-font -file Cica-Regular.ttf",
-            "sudo remove-font -file Cica-RegularItalic.ttf",
-            "sudo remove-font -file Cica-Bold.ttf",
-            "sudo remove-font -file Cica-BoldItalic.ttf"
-        ]
-    }
+  "homepage": "https://miiton.github.io/Cica/",
+  "description": "プログラミング用日本語等幅フォント Cica(シカ)",
+  "version": "5.0.1",
+  "license": {
+    "identifier": "Freeware",
+    "url": "https://github.com/miiton/Cica/blob/master/LICENSE.txt"
+  },
+  "url": "https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip",
+  "hash": "b61ae55fb1a4a98dd78e90fe68649bcfaabb20a5eaaffa57c246356890c6b0df",
+  "checkver": {
+    "github": "https://github.com/miiton/Cica"
+  },
+  "autoupdate": {
+    "url": "https://github.com/miiton/Cica/releases/download/v$version/Cica_v$version_with_emoji.zip"
+  },
+  "depends": [
+    "sudo",
+    "ps-font-scripts"
+  ],
+  "installer": {
+    "script": [
+      "sudo add-font -path $dir\\Cica-Regular.ttf",
+      "sudo add-font -path $dir\\Cica-RegularItalic.ttf",
+      "sudo add-font -path $dir\\Cica-Bold.ttf",
+      "sudo add-font -path $dir\\Cica-BoldItalic.ttf"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "sudo remove-font -file Cica-Regular.ttf",
+      "sudo remove-font -file Cica-RegularItalic.ttf",
+      "sudo remove-font -file Cica-Bold.ttf",
+      "sudo remove-font -file Cica-BoldItalic.ttf"
+    ]
+  }
 }

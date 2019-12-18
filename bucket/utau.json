@@ -1,48 +1,48 @@
 {
-    "homepage": "http://utau2008.web.fc2.com/index.html",
-    "description": "歌声合成ツールutau",
-    "version": "0.4.18e",
-    "license": {
-        "identifier": "shareware",
-        "url": "http://utau2008.web.fc2.com/index.html#shareware"
-    },
-    "url": "http://utau2008.xrea.jp/utau0418e-inst.zip",
-    "hash": "3c53fea245ab91b4cf357292715837e51cb41e4b3901efa9d9a4b55db76c79ed",
-    "depends": [
-        "sudo"
-    ],
-    "persist": [
-        "plugins",
-        "engine",
-        "voice",
-        "setting.ini"
-    ],
-    "pre_install": [
-        "invoke-externalcommand -filepath \"$dir\\utau0418e-inst.exe\" -argumentlist \"/q /t:$dir\\tmp /c\" -runas | out-null",
-        "if (!(Test-Path \"$persist_dir\\setting.ini\")) {",
-        "    new-item \"$dir\\setting.ini\" -type file | out-null",
-        "}"
-    ],
-    "installer": {
-        "script": [
-            "expand-msiarchive \"$dir\\tmp\\utaustup.msi\" \"$dir\"",
-            "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\mscomctl.ocx\"",
-            "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\comdlg32.ocx\"",
-            "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\msinet.ocx\""
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "sudo regsvr32.exe /s /u \"$dir\\システム フォルダ\\mscomctl.ocx\"",
-            "sudo regsvr32.exe /s /u \"$dir\\システム フォルダ\\comdlg32.ocx\"",
-            "sudo regsvr32.exe /s /u \"$dir\\システム フォルダ\\msinet.ocx\""
-        ]
-    },
-    "shortcuts": [
-        [
-            "utau.exe",
-            "歌声合成ツールutau"
-        ]
+  "homepage": "http://utau2008.web.fc2.com/index.html",
+  "description": "歌声合成ツールutau",
+  "version": "0.4.18e",
+  "license": {
+    "identifier": "shareware",
+    "url": "http://utau2008.web.fc2.com/index.html#shareware"
+  },
+  "url": "http://utau2008.xrea.jp/utau0418e-inst.zip",
+  "hash": "3c53fea245ab91b4cf357292715837e51cb41e4b3901efa9d9a4b55db76c79ed",
+  "depends": [
+    "sudo"
+  ],
+  "persist": [
+    "plugins",
+    "engine",
+    "voice",
+    "setting.ini"
+  ],
+  "pre_install": [
+    "invoke-externalcommand -filepath \"$dir\\utau0418e-inst.exe\" -argumentlist \"/q /t:$dir\\tmp /c\" -runas | out-null",
+    "if (!(Test-Path \"$persist_dir\\setting.ini\")) {",
+    "    new-item \"$dir\\setting.ini\" -type file | out-null",
+    "}"
+  ],
+  "installer": {
+    "script": [
+      "expand-msiarchive \"$dir\\tmp\\utaustup.msi\" \"$dir\"",
+      "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\mscomctl.ocx\"",
+      "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\comdlg32.ocx\"",
+      "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\msinet.ocx\""
     ]
+  },
+  "uninstaller": {
+    "script": [
+      "sudo regsvr32.exe /s /u \"$dir\\システム フォルダ\\mscomctl.ocx\"",
+      "sudo regsvr32.exe /s /u \"$dir\\システム フォルダ\\comdlg32.ocx\"",
+      "sudo regsvr32.exe /s /u \"$dir\\システム フォルダ\\msinet.ocx\""
+    ]
+  },
+  "shortcuts": [
+    [
+      "utau.exe",
+      "歌声合成ツールutau"
+    ]
+  ]
 }
 

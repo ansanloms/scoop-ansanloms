@@ -6,20 +6,23 @@
         "identifier": "Freeware",
         "url": "https://pm85122.onamae.jp/851fontpage.html#readme"
     },
-    "url": "https://pm85122.onamae.jp/851tegaki_zatsu_normal_0883.ttf",
+    "url": "https://pm85122.onamae.jp/851tegaki_zatsu_normal_0883.ttf#/851tegaki_zatsu_normal.ttf",
     "hash": "e5290d6583e1aef725f07921aad69b9eaa83cf3408273cf840ff31842d118f0e",
     "depends": [
         "sudo",
         "ps-font-scripts"
     ],
     "installer": {
-        "script": [
-            "sudo add-font -path $dir\\851tegaki_zatsu_normal_0883.ttf"
-        ]
+        "script": "sudo add-font -path $dir\\851tegaki_zatsu_normal.ttf"
     },
     "uninstaller": {
-        "script": [
-            "sudo remove-font -file 851tegaki_zatsu_normal_0883.ttf"
-        ]
+        "script": "sudo remove-font -file 851tegaki_zatsu_normal.ttf"
+    },
+    "checkver": {
+        "url": "https://pm85122.onamae.jp/851fontpage.html",
+        "regex": "<a href=\"851tegaki_zatsu_normal_(?<short>[\\d.]+).ttf\">Ver(?<version>[\\d.]+\\.[\\d.]+)</a>"
+    },
+    "autoupdate": {
+        "url": "https://pm85122.onamae.jp/851tegaki_zatsu_normal_0883.ttf#/851tegaki_zatsu_normal.ttf"
     }
 }
