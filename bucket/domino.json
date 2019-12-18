@@ -1,0 +1,15 @@
+{
+  "homepage": "http://takabosoft.com/domino",
+  "description": "Domino",
+  "version": "1.43",
+  "license": "Free software",
+  "url": "http://takabosoft.com/download/win/domino/Domino143.zip",
+  "hash": "68747fc8040f3a0ae4c1172ed2b21b8899eef4e5440d7bbf33d1cbc96d059100",
+  "shortcuts": [
+    [
+      "Domino.exe",
+      "Domino"
+    ]
+  ]
+}
+
