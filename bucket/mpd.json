@@ -1,0 +1,13 @@
+{
+  "homepage": "https://www.musicpd.org/",
+  "description": "Music Player Daemon",
+  "version": "0.21.18",
+  "url": "https://www.musicpd.org/download/win32/0.21.18/mpd.exe",
+  "hash": "e82e05341fe21041c27bab468a37db16ff36843f417731323bd245e26c3b92b7",
+  "checkver": {
+    "github": "https://github.com/MusicPlayerDaemon/MPD"
+  },
+  "autoupdate": {
+    "url": "https://www.musicpd.org/download/win32/$version/mpd.exe"
+  }
+}
