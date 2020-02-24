@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/mattn/efm-langserver",
     "description": "General purpose Language Server.",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mattn/efm-langserver/releases/download/v0.0.7/efm-langserver_windows_386.zip",
-            "hash": "2d69b88c311145c07a639fe2c7842da9b572237dc1bc51d24b6bf207e9676c73"
+            "url": "https://github.com/mattn/efm-langserver/releases/download/v0.0.8/efm-langserver_windows_386.zip",
+            "hash": "38b78df0f43e048c65a23c87582ff0df695467166aabbebdb70aa713c5cc1fcf"
         },
         "32bit": {
-            "url": "https://github.com/mattn/efm-langserver/releases/download/v0.0.7/efm-langserver_windows_amd64.zip",
-            "hash": "3a9bbd917bcd2eef652c0244f75403e8d67c14c300bb4819944198d856347d1e"
+            "url": "https://github.com/mattn/efm-langserver/releases/download/v0.0.8/efm-langserver_windows_amd64.zip",
+            "hash": "a9f1fe461d2ccdb6236518af9b705a609c4a94b9dad0cdd32927f678209a19ca"
         }
     },
     "bin": "efm-langserver.exe",
