@@ -1,0 +1,47 @@
+{
+    "homepage": "https://www.jetbrains.com/ja-jp/lp/mono/",
+    "description": "JetBrains Mono",
+    "version": "1.0.6",
+    "license": {
+        "identifier": "Apache License 2.0",
+        "url": "https://github.com/JetBrains/JetBrainsMono/blob/master/LICENSE"
+    },
+    "url": "https://github.com/JetBrains/JetBrainsMono/releases/download/v1.0.6/JetBrainsMono-1.0.6.zip",
+    "hash": "2c2d660c46fa68f1b4ae087990b0742b12a7585e96b9e791adb28583251c0472",
+    "extract_dir": "JetBrainsMono-1.0.6",
+    "checkver": {
+        "github": "https://github.com/JetBrains/JetBrainsMono"
+    },
+    "autoupdate": {
+        "url": "https://github.com/JetBrains/JetBrainsMono/releases/download/v$version/JetBrainsMono-$version.zip",
+        "extract_dir": "JetBrainsMono-$version"
+    },
+    "depends": [
+        "sudo",
+        "ps-font-scripts"
+    ],
+    "installer": {
+        "script": [
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-Bold-Italic.ttf",
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-Bold.ttf",
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-ExtraBold-Italic.ttf",
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-ExtraBold.ttf",
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-Italic.ttf",
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-Medium-Italic.ttf",
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-Medium.ttf",
+            "sudo add-font -path $dir\\ttf\\JetBrainsMono-Regular.ttf"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "sudo remove-font -file JetBrainsMono-Bold-Italic.ttf",
+            "sudo remove-font -file JetBrainsMono-Bold.ttf",
+            "sudo remove-font -file JetBrainsMono-ExtraBold-Italic.ttf",
+            "sudo remove-font -file JetBrainsMono-ExtraBold.ttf",
+            "sudo remove-font -file JetBrainsMono-Italic.ttf",
+            "sudo remove-font -file JetBrainsMono-Medium-Italic.ttf",
+            "sudo remove-font -file JetBrainsMono-Medium.ttf",
+            "sudo remove-font -file JetBrainsMono-Regular.ttf"
+        ]
+    }
+}
