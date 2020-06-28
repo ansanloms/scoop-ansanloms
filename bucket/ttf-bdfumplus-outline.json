@@ -8,7 +8,6 @@
     },
     "url": "https://github.com/hikaen2/ttf-bdfumplus-outline/releases/download/20200628/ttf-bdfumplus-outline-20200628.zip",
     "hash": "91a0ade9a603a6c01b1976021218e3facbff411ec45f05b5112b2446f86470e6",
-    "extract_dir": "ttf-bdfumplus-outline-20200628",
     "checkver": {
         "github": "https://github.com/hikaen2/ttf-bdfumplus-outline"
     },
