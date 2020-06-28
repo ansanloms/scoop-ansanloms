@@ -5,12 +5,12 @@
   "architecture": {
     "64bit": {
       "url": "https://ice.hotmint.com/putty/down/putty-gdi-20200628.zip",
-      "hash": "ec2bd61ff90423869bb5c21daf4e9ed1163c1a6ec0709c58f8afe09eb5052520",
+      "hash": "27b63914695e1b5753c66a32c5eadd98e9822f8d3e0651fac8da0e10ec3d1881",
       "extract_dir": "putty-gdi-20200628"
     },
     "32bit": {
       "url": "https://ice.hotmint.com/putty/down/putty-gdi-20200628.zip",
-      "hash": "ec2bd61ff90423869bb5c21daf4e9ed1163c1a6ec0709c58f8afe09eb5052520",
+      "hash": "27b63914695e1b5753c66a32c5eadd98e9822f8d3e0651fac8da0e10ec3d1881",
       "extract_dir": "putty-gdi-20200628\\x86"
     }
   },
