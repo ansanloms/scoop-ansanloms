@@ -21,8 +21,8 @@
     ],
     "installer": {
         "script": [
-            "sudo add-font -path $dir\\compiled\\bdfUMplus-outline.ttf",
-            "sudo add-font -path $dir\\compiled\\bdfUMplus-outline-bold.ttf"
+            "sudo add-font -path $dir\\bdfUMplus-outline.ttf",
+            "sudo add-font -path $dir\\bdfUMplus-outline-bold.ttf"
         ]
     },
     "uninstaller": {
