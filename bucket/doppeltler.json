@@ -1,9 +1,9 @@
 {
     "homepage": "http://utau2008.xrea.jp/",
     "description": "Doppeltler resampler tool",
-    "version": "008",
-    "url": "http://utau2008.xrea.jp/2020/engine/doppeltler008.zip",
-    "hash": "7e6c5be37feb7b50d4e420324ba4ff1f82705826dd8db9d692cbe6a48e7b5c5b",
+    "version": "009",
+    "url": "http://utau2008.xrea.jp/2020/engine/doppeltler009.zip",
+    "hash": "1d9a26f77a95f3f4fdf25b68cb83e3e43d03fd15a37a2b4d5edbbcd2f529189c",
     "depends": [
         "sudo",
         "utau"
