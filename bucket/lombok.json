@@ -1,9 +1,9 @@
 {
     "homepage": "https://projectlombok.org/",
     "description": "Lombok",
-    "version": "1.18.12",
-    "url": "https://projectlombok.org/downloads/lombok-1.18.12.jar#/lombok.jar",
-    "hash": "49381508ecb02b3c173368436ef71b24c0d4418ad260e6cc98becbcf4b345406",
+    "version": "1.18.16",
+    "url": "https://projectlombok.org/downloads/lombok-1.18.16.jar#/lombok.jar",
+    "hash": "7206cbbfd6efd5e85bceff29545633645650be58d58910a23b0d4835fbd15ed7",
     "checkver": {
         "url": "https://projectlombok.org/download",
         "re": "<span id=\"currentVersion\">([\\d.]+\\.[\\d.]+\\.[\\d.]+)</span>"
