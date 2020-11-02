@@ -1,0 +1,25 @@
+{
+    "homepage": "https://moji-waku.com/makinas/",
+    "description": "マキナス 4 シリーズ",
+    "version": "1.0.0",
+    "license": "フリーフォント（商用可）",
+    "url": "https://moji-waku.com/download/makinas4.zip",
+    "hash": "8d39bc6bd54ce67a1acab1e91675df6eb5b17aafe463bb08784f5bb6a3794f9e",
+    "extract_dir": "makinas4",
+    "depends": [
+        "sudo",
+        "ps-font-scripts"
+    ],
+    "installer": {
+        "script": [
+            "sudo add-font -path \"$dir\\Makinas-4-Flat.otf\"",
+            "sudo add-font -path \"$dir\\Makinas-4-Square.otf\""
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "sudo remove-font -file Makinas-4-Flat.otf",
+            "sudo remove-font -file Makinas-4-Square.otf"
+        ]
+    }
+}
