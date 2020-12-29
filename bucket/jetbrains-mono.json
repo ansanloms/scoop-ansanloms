@@ -1,13 +1,13 @@
 {
     "homepage": "https://www.jetbrains.com/ja-jp/lp/mono/",
     "description": "JetBrains Mono",
-    "version": "2.210",
+    "version": "2.221",
     "license": {
         "identifier": "Apache License 2.0",
         "url": "https://github.com/JetBrains/JetBrainsMono/blob/master/LICENSE"
     },
-    "url": "https://github.com/JetBrains/JetBrainsMono/releases/download/v2.210/JetBrainsMono-2.210.zip",
-    "hash": "3d368735d2e8ff3abe1583de540284e70dd16d8d871e8f1b0f73685ced7b8ba7",
+    "url": "https://github.com/JetBrains/JetBrainsMono/releases/download/v2.221/JetBrainsMono-2.221.zip",
+    "hash": "2fcbc70aca5ddabcfdbbc536c2b5f65ccf798ff13d8078738cbbef84c57e99a9",
     "extract_dir": "fonts",
     "checkver": {
         "github": "https://github.com/JetBrains/JetBrainsMono"
