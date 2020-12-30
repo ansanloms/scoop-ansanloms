@@ -5,27 +5,29 @@
     "url": "https://github.com/agata/dl.biscuit/releases/download/v1.2.13/Biscuit-Setup-1.2.13.exe/#dl.7z",
     "hash": "dcc9ca6a7b87cada6123a3bf2a420eb86f50013153ef03df4d342a93df31e178",
     "extract_dir": "$PLUGINSDIR",
+    "depends": "7zip",
+    "architecture": {
+        "64bit": {
+          "installer": {
+              "script": "7z x -o\"$dir\" \"$dir\\app-64.7z\""
+          }
+        },
+        "32bit": {
+          "installer": {
+              "script": "7z x -o\"$dir\" \"$dir\\app-32.7z\""
+          }
+        }
+    },
     "checkver": {
         "github": "https://github.com/agata/dl.biscuit"
     },
     "autoupdate": {
         "url": "https://github.com/agata/dl.biscuit/releases/download/v$version/Biscuit-Setup-$version.exe/#dl.7z"
     },
-    "depends": "7zip",
-    "installer": {
-        "script": [
-            "7z x -o\"$dir\\64\" \"$dir\\app-64.7z\"",
-            "7z x -o\"$dir\\32\" \"$dir\\app-64.7z\""
-        ]
-    },
     "shortcuts": [
         [
-            "64/Biscuit.exe",
+            "Biscuit.exe",
             "Biscuit"
-        ],
-        [
-            "32/Biscuit.exe",
-            "Biscuit (32bit)"
         ]
     ]
 }
