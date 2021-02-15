@@ -1,21 +1,21 @@
 {
     "homepage": "https://eatbiscuit.com/",
     "description": "Biscuit | A browser so your apps don't get buried in tabs",
-    "version": "1.2.13",
-    "url": "https://github.com/agata/dl.biscuit/releases/download/v1.2.13/Biscuit-Setup-1.2.13.exe/#dl.7z",
-    "hash": "dcc9ca6a7b87cada6123a3bf2a420eb86f50013153ef03df4d342a93df31e178",
+    "version": "1.2.14",
+    "url": "https://github.com/agata/dl.biscuit/releases/download/v1.2.14/Biscuit-Setup-1.2.14.exe/#dl.7z",
+    "hash": "68744e70f2735d673862f15a49de7db4bb1f981807eef2fbaa7cb1180e965c2b",
     "extract_dir": "$PLUGINSDIR",
     "depends": "7zip",
     "architecture": {
         "64bit": {
-          "installer": {
-              "script": "7z x -o\"$dir\" \"$dir\\app-64.7z\""
-          }
+            "installer": {
+                "script": "7z x -o\"$dir\" \"$dir\\app-64.7z\""
+            }
         },
         "32bit": {
-          "installer": {
-              "script": "7z x -o\"$dir\" \"$dir\\app-32.7z\""
-          }
+            "installer": {
+                "script": "7z x -o\"$dir\" \"$dir\\app-32.7z\""
+            }
         }
     },
     "checkver": {
