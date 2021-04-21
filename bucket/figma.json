@@ -1,0 +1,23 @@
+{
+    "homepage": "https://www.figma.com/",
+    "version": "97.7.0",
+    "url": "https://desktop.figma.com/win/FigmaSetup.exe#/dl.7z",
+    "hash": "851b5dff569ded8c56f0178af0b958ea91ea505e6bc238288631106869c5b158",
+    "depends": "7zip",
+    "installer": {
+        "script": "7z x -o\"$dir\" \"$dir\\Figma-$version-full.nupkg\""
+    },
+    "shortcuts": [
+        [
+            "lib\\net45\\Figma.exe",
+            "Figma"
+        ]
+    ],
+    "checkver": {
+        "url": "https://desktop.figma.com/win/RELEASE.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://desktop.figma.com/win/FigmaSetup.exe#/dl.7z"
+    }
+}
