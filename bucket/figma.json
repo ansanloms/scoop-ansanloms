@@ -1,8 +1,8 @@
 {
     "homepage": "https://www.figma.com/",
-    "version": "97.7.0",
+    "version": "98.10.0",
     "url": "https://desktop.figma.com/win/FigmaSetup.exe#/dl.7z",
-    "hash": "851b5dff569ded8c56f0178af0b958ea91ea505e6bc238288631106869c5b158",
+    "hash": "2779ea1227004928759300a21f0d602913bee728fa60414c5d9f40ad67cc36f1",
     "depends": "7zip",
     "installer": {
         "script": "7z x -o\"$dir\" \"$dir\\Figma-$version-full.nupkg\""
