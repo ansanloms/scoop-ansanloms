@@ -1,7 +1,7 @@
 {
     "homepage": "http://ackiesound.ifdef.jp/download.html#wt",
     "description": "WaveTone",
-    "version": "2.63",
+    "version": "2.62",
     "url": "http://ackiesound.ifdef.jp/data/wavetone263.zip",
     "hash": "bd570dd0bcc416230f1773e276a43ec1e818c68e87ef3519d017cea4b3040590",
     "extract_dir": "wavetone261",
@@ -16,6 +16,7 @@
         "regex": "WaveTone ver.(?<version>[\\d.]+\\.[\\w.]+)<br>\\s*<a href=\"\\./data/wavetone(?<short>[\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "url": "http://ackiesound.ifdef.jp/data/wavetone$matchShort.zip"
+        "url": "http://ackiesound.ifdef.jp/data/wavetone$matchShort.zip",
+        "extract_dir": "wavetone$matchShort"
     }
 }
