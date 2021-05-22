@@ -10,6 +10,13 @@
       "wavetone.exe",
       "WaveTone"
     ]
-  ]
+  ],
+  "checkver": {
+    "url": "http://ackiesound.ifdef.jp/download.html",
+    "regex": "WaveTone ver.(?<version>[\\d.]+\\.[\\w.]+)<br>\\s*<a href=\"\\./data/wavetone(?<short>[\\d.]+)\\.zip"
+  },
+  "autoupdate": {
+    "url": "http://ackiesound.ifdef.jp/data/wavetone$matchShort.zip"
+  }
 }
 
