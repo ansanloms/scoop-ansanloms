@@ -1,66 +1,66 @@
 {
-  "homepage": "https://ice.hotmint.com/putty/",
-  "version": "20200628",
-  "license": "http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html",
-  "architecture": {
-    "64bit": {
-      "url": "https://ice.hotmint.com/putty/down/putty-gdi-20200628.zip",
-      "hash": "27b63914695e1b5753c66a32c5eadd98e9822f8d3e0651fac8da0e10ec3d1881",
-      "extract_dir": "putty-gdi-20200628"
-    },
-    "32bit": {
-      "url": "https://ice.hotmint.com/putty/down/putty-gdi-20200628.zip",
-      "hash": "27b63914695e1b5753c66a32c5eadd98e9822f8d3e0651fac8da0e10ec3d1881",
-      "extract_dir": "putty-gdi-20200628\\x86"
-    }
-  },
-  "bin": [
-    "pageant.exe",
-    "plink.exe",
-    "pscp.exe",
-    "psftp.exe",
-    "putty.exe",
-    "puttygen.exe",
-    "puttytel.exe"
-  ],
-  "persist": "putty.ini",
-  "pre_install": [
-    "if (!(Test-Path \"$persist_dir\\putty.ini\")) {",
-    "    new-item \"$dir\\putty.ini\" -type file | out-null",
-    "}"
-  ],
-  "shortcuts": [
-    [
-      "putty.exe",
-      "PuTTY"
-    ],
-    [
-      "pageant.exe",
-      "Pageant"
-    ],
-    [
-      "psftp.exe",
-      "PSFTP"
-    ],
-    [
-      "puttygen.exe",
-      "PuTTYgen"
-    ]
-  ],
-  "checkver": {
-    "url": "https://ice.hotmint.com/putty/",
-    "re": "putty-gdi-([\\d.]+).zip"
-  },
-  "autoupdate": {
+    "homepage": "https://ice.hotmint.com/putty/",
+    "version": "20210512",
+    "license": "http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html",
     "architecture": {
-      "64bit": {
-        "url": "https://ice.hotmint.com/putty/down/putty-gdi-$version.zip",
-        "extract_dir": "putty-gdi-$version"
-      },
-      "32bit": {
-        "url": "https://ice.hotmint.com/putty/down/putty-gdi-$version.zip",
-        "extract_dir": "putty-gdi-$version\\x86"
-      }
+        "64bit": {
+            "url": "https://ice.hotmint.com/putty/down/putty-gdi-20210512.zip",
+            "hash": "7c4def065e962c40133782b7c47af15456d1fe7413d8b0e2ef24a91314b794da",
+            "extract_dir": "putty-gdi-20210512"
+        },
+        "32bit": {
+            "url": "https://ice.hotmint.com/putty/down/putty-gdi-20210512.zip",
+            "hash": "7c4def065e962c40133782b7c47af15456d1fe7413d8b0e2ef24a91314b794da",
+            "extract_dir": "putty-gdi-20210512\\x86"
+        }
+    },
+    "bin": [
+        "pageant.exe",
+        "plink.exe",
+        "pscp.exe",
+        "psftp.exe",
+        "putty.exe",
+        "puttygen.exe",
+        "puttytel.exe"
+    ],
+    "persist": "putty.ini",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\putty.ini\")) {",
+        "    new-item \"$dir\\putty.ini\" -type file | out-null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "putty.exe",
+            "PuTTY"
+        ],
+        [
+            "pageant.exe",
+            "Pageant"
+        ],
+        [
+            "psftp.exe",
+            "PSFTP"
+        ],
+        [
+            "puttygen.exe",
+            "PuTTYgen"
+        ]
+    ],
+    "checkver": {
+        "url": "https://ice.hotmint.com/putty/",
+        "re": "putty-gdi-([\\d.]+).zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ice.hotmint.com/putty/down/putty-gdi-$version.zip",
+                "extract_dir": "putty-gdi-$version"
+            },
+            "32bit": {
+                "url": "https://ice.hotmint.com/putty/down/putty-gdi-$version.zip",
+                "extract_dir": "putty-gdi-$version\\x86"
+            }
+        }
     }
-  }
 }
