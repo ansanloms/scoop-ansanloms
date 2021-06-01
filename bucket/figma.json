@@ -1,6 +1,6 @@
 {
     "homepage": "https://www.figma.com/",
-    "version": "98.10.0",
+    "version": "98.14.0",
     "url": "https://desktop.figma.com/win/FigmaSetup.exe#/dl.7z",
     "hash": "d1a240b28e21d495c3fbb007daf893a315844c7d4788efede7476f59667275ce",
     "depends": "7zip",
