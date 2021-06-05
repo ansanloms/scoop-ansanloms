@@ -1,0 +1,22 @@
+{
+    "homepage": "https://docs.microsoft.com/ja-jp/sysinternals/downloads/ctrl2cap",
+    "description": "Ctrl2Cap",
+    "version": "2.0",
+    "url": "https://download.sysinternals.com/files/Ctrl2Cap.zip",
+    "hash": "2d8c06374da140beda79ac1940ab2b06a56a9af182dba70a6338313d768a2ac2",
+    "depends": "sudo",
+    "installer": {
+        "script": [
+          "pushd $dir",
+          "sudo .\\ctrl2cap.exe /install",
+          "popd"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+          "pushd $dir",
+          "sudo .\\ctrl2cap.exe /uninstall",
+          "popd"
+        ]
+    }
+}
