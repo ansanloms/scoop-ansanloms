@@ -7,19 +7,25 @@
     "hash": "8db453545e65c4d2d9870890e0f27f0786e41db4b3862773c8d327c12632c378",
     "extract_dir": "makinas4",
     "depends": [
-        "sudo",
-        "ps-font-scripts"
+        "sudo"
     ],
     "installer": {
         "script": [
-            "sudo add-font -path \"$dir\\Makinas-4-Flat.otf\"",
-            "sudo add-font -path \"$dir\\Makinas-4-Square.otf\""
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.otf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
         ]
     },
     "uninstaller": {
         "script": [
-            "sudo remove-font -file Makinas-4-Flat.otf",
-            "sudo remove-font -file Makinas-4-Square.otf"
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.otf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The makinas 4 has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
         ]
     }
 }
