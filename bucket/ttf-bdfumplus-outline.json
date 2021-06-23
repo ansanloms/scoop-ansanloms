@@ -16,19 +16,25 @@
         "extract_dir": "ttf-bdfumplus-outline-$version"
     },
     "depends": [
-        "sudo",
-        "ps-font-scripts"
+        "sudo"
     ],
     "installer": {
         "script": [
-            "sudo add-font -path $dir\\bdfUMplus-outline.ttf",
-            "sudo add-font -path $dir\\bdfUMplus-outline-bold.ttf"
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
         ]
     },
     "uninstaller": {
         "script": [
-            "sudo remove-font -file bdfUMplus-outline.ttf",
-            "sudo remove-font -file bdfUMplus-outline-bold.ttf"
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The BDF UM+ Outline has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
         ]
     }
 }
