@@ -7,16 +7,28 @@
         "url": "https://pm85122.onamae.jp/851mkpop.html#readme"
     },
     "url": "https://pm85122.onamae.jp/851MkPOP_100.ttf#/851MkPOP.ttf",
-    "hash": "afdb8f1ac8080aabd9c3350f856c9e621214897c89276d9a58bce2fade913409",
+    "hash": "083150c9f1d8f7e354b3c7ca55a8d7e6728a785a70c46e64b010e1b3ad42840a",
     "depends": [
-        "sudo",
-        "ps-font-scripts"
+        "sudo"
     ],
     "installer": {
-        "script": "sudo add-font -path $dir\\851MkPOP.ttf"
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
     },
     "uninstaller": {
-        "script": "sudo remove-font -file 851MkPOP.ttf"
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The 851MkPOP has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
     },
     "checkver": {
         "url": "https://pm85122.onamae.jp/851mkpop.html",
