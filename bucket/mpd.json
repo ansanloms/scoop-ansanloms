@@ -6,7 +6,8 @@
     "hash": "cb058271363d5fd19a0f08967937c88c0f6a0fc5e6c9c04be429cd3dc127b873",
     "bin": "mpd.exe",
     "checkver": {
-        "github": "https://github.com/MusicPlayerDaemon/MPD"
+        "url": "https://github.com/MusicPlayerDaemon/MPD/tags",
+        "regex": "\\/releases\\/tag\\/(?:v|V)?([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://www.musicpd.org/download/win32/$version/mpd.exe"
