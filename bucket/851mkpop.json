@@ -1,16 +1,14 @@
 {
     "homepage": "https://pm85122.onamae.jp/851mkpop.html",
     "description": "851マカポップ",
-    "version": "1.00",
+    "version": "1.01",
     "license": {
         "identifier": "Freeware",
         "url": "https://pm85122.onamae.jp/851mkpop.html#readme"
     },
-    "url": "https://pm85122.onamae.jp/851MkPOP_100.ttf#/851MkPOP.ttf",
-    "hash": "083150c9f1d8f7e354b3c7ca55a8d7e6728a785a70c46e64b010e1b3ad42840a",
-    "depends": [
-        "sudo"
-    ],
+    "url": "https://pm85122.onamae.jp/851MkPOP_101.ttf#/851MkPOP.ttf",
+    "hash": "66b0a68c701b40238f9657598a2c0bad52fde1b63820b868ff3bf67f1929b1e6",
+    "depends": "sudo",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",

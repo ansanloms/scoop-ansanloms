@@ -1,9 +1,9 @@
 {
     "homepage": "https://www.musicpd.org/",
     "description": "Music Player Daemon",
-    "version": "0.23.4",
-    "url": "https://www.musicpd.org/download/win32/0.23.4/mpd.exe",
-    "hash": "d2c1fb566abb63857f7c6554f3f70a5a257eb6ba91148c1df10decbbbe6e84ba",
+    "version": "0.23.5",
+    "url": "https://www.musicpd.org/download/win32/0.23.5/mpd.exe",
+    "hash": "7d004c4fffac852e536631e250fdba627af7c1c20e779eab0a097b0614d18459",
     "bin": "mpd.exe",
     "checkver": {
         "url": "https://github.com/MusicPlayerDaemon/MPD/tags",
