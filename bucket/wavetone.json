@@ -1,10 +1,10 @@
 {
     "homepage": "http://ackiesound.ifdef.jp/download.html#wt",
     "description": "WaveTone",
-    "version": "2.66",
-    "url": "http://ackiesound.ifdef.jp/data/wavetone266.zip",
-    "hash": "725f7316908b850ce2e2a82fc3b35d282332a4a3b8b824b69910060346f290f1",
-    "extract_dir": "wavetone266",
+    "version": "2.67",
+    "url": "http://ackiesound.ifdef.jp/data/wavetone267.zip",
+    "hash": "1c3137d15d6b40750ebf3d576ffc473334c3bef9f4fe1af45a83c9acb4af4721",
+    "extract_dir": "wavetone267",
     "shortcuts": [
         [
             "wavetone.exe",
