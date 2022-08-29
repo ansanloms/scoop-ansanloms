@@ -1,0 +1,36 @@
+{
+    "homepage": "https://github.com/DBCTRADO/TVTest",
+    "version": "2022-08-29",
+    "license": "GPL",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SlashNephy/TVTest-builder/releases/download/2022-08-29/TVTest_x64_AVX.zip",
+            "hash": "9c3e8d4371eee63d1dfc67418d120f9e8ab07e6ff247a81052107b04e22d6c58",
+            "extract_dir": "TVTest_x64_AVX"
+        }
+    },
+    "persist": [
+        "BonDriver",
+        "Plugins",
+        "Themes",
+        "TVTest.ini"
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\TVTest.ini\")) {",
+        "    new-item \"$dir\\TVTest.ini\" -type file | out-null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "TVTest.exe",
+            "TVTest"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/SlashNephy/TVTest-builder",
+        "re": "\\/releases\\/tag\\/([\\w\\-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/SlashNephy/TVTest-builder/releases/download/$version/TVTest_x64_AVX.zip"
+    }
+}
