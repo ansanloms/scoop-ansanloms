@@ -18,14 +18,14 @@
     "setting.ini"
   ],
   "pre_install": [
-    "Invoke-ExternalCommand -filepath \"$dir\\utau0418e-inst.exe\" -argumentlist \"/q /t:$dir\\tmp /c\" -runas | out-null",
+    "Start-Process -FilePath \"$dir\\utau0418e-inst.exe\" -ArgumentList \"/Q /T:$dir\\tmp /C\" -Wait",
     "if (!(Test-Path \"$persist_dir\\setting.ini\")) {",
     "    New-Item \"$dir\\setting.ini\" -type file | out-null",
     "}"
   ],
   "installer": {
     "script": [
-      "Expand-MsiArchive \"$dir\\tmp\\utaustup.msi\" \"$dir\"",
+      "msiexec /a $dir\\tmp\\utaustup.msi targetdir=\"$dir\" /qn",
       "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\MSCOMCTL.ocx\"",
       "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\COMDLG32.ocx\"",
       "sudo regsvr32.exe /s \"$dir\\システム フォルダ\\msinet.ocx\"",
