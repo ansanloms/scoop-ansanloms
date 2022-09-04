@@ -1,9 +1,9 @@
 {
     "homepage": "https://github.com/titinko/utsu",
     "description": "UTSU - A cross-platform vocal synthesis frontend",
-    "version": "0.4.3",
-    "url": "https://github.com/titinko/utsu/releases/download/v0.4.3/Utsu-0.4.3.msi",
-    "hash": "b4fe385df527a6849c13d767b5b86f5e531a74fd272198b7e26aee2aecb0e8c6",
+    "version": "0.4.5",
+    "url": "https://github.com/titinko/utsu/releases/download/v0.4.5/Utsu-0.4.5.msi",
+    "hash": "db539e9ae85719c3de751cc24b3274f47c767f9c22a0176517535804f2b05e4a",
     "checkver": {
         "github": "https://github.com/titinko/utsu"
     },
