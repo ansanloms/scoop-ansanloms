@@ -1,0 +1,16 @@
+{
+    "homepage": "https://github.com/xinntao/Real-ESRGAN",
+    "description": "Real-ESRGAN aims at developing Practical Algorithms for General Image/Video Restoration.",
+    "version": "0.2.5.0",
+    "license": "BSD-3-Clause license",
+    "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-windows.zip",
+    "hash": "abc02804e17982a3be33675e4d471e91ea374e65b70167abc09e31acb412802d",
+    "checkver": {
+        "github": "https://github.com/xinntao/Real-ESRGAN",
+        "re": "\\/releases\\/download\\/v(?<version>[0-9\\.]+)\\/realesrgan-ncnn-vulkan-(?<date>[0-9]{8})-windows.zip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v$version/realesrgan-ncnn-vulkan-$matchDate-windows.zip"
+    },
+    "bin": "realesrgan-ncnn-vulkan.exe"
+}
