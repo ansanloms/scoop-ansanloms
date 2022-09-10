@@ -1,25 +1,25 @@
 {
-  "homepage": "https://github.com/tdenc/TDEnc/",
-  "description": "つんでれんこ",
-  "version": "2.98",
-  "url": "https://github.com/tdenc/TDEnc/releases/download/v2.98/TDEnc.zip",
-  "hash": "24de89536629483a1f1f5fdbb851dd8104ef7e8639a3f1d05d2b88055de621b4",
-  "extract_dir": "TDEnc",
-  "checkver": "github",
-  "autoupdate": {
-    "url": "https://github.com/tdenc/TDEnc/releases/download/v$version/TDEnc.zip",
-    "extract_dir": "TDEnc"
-  },
-  "shortcuts": [
-    [
-      "【ここに動画をD&D】.bat",
-      "つんでれんこ"
+    "homepage": "https://github.com/tdenc/TDEnc/",
+    "description": "つんでれんこ",
+    "version": "2.99",
+    "url": "https://github.com/tdenc/TDEnc/releases/download/v2.99/TDEnc.zip",
+    "hash": "7f847b238d575bb4dfc9aba7a721714732f7ed4b1384eff838e03cdf7ab66a8a",
+    "extract_dir": "TDEnc",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/tdenc/TDEnc/releases/download/v$version/TDEnc.zip",
+        "extract_dir": "TDEnc"
+    },
+    "shortcuts": [
+        [
+            "【ここに動画をD&D】.bat",
+            "つんでれんこ"
+        ]
+    ],
+    "bin": [
+        [
+            "【ここに動画をD&D】.bat",
+            "tdenc"
+        ]
     ]
-  ],
-  "bin": [
-    [
-      "【ここに動画をD&D】.bat",
-      "tdenc"
-    ]
-  ]
 }
