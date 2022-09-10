@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/yuru7/PlemolJP",
     "description": "IBM Plex Mono と IBM Plex Sans JP を合成したプログラミングフォント PlemolJP (プレモル ジェイピー)",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "license": {
         "identifier": "Freeware",
         "url": "https://github.com/yuru7/PlemolJP/blob/main/LICENSE.txt"
     },
-    "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.2.6/PlemolJP_HS_v1.2.6.zip",
-    "hash": "6ddbf87bdd4c7c6d763a143cdd4d4d750d9bd4ca5871ac15c90b7c6e7c0fa846",
+    "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.2.7/PlemolJP_HS_v1.2.7.zip",
+    "hash": "972fc719db34d519500d0dbad35456efd9d87aabe476d6c980354b147fe2b48e",
     "checkver": {
         "github": "https://github.com/yuru7/PlemolJP"
     },
