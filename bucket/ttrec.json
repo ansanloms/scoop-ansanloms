@@ -1,0 +1,54 @@
+{
+    "homepage": "https://github.com/xtne6f/TTRec",
+    "version": "master-161222",
+    "url": "https://github.com/xtne6f/TTRec/releases/download/master-161222/TTRec19.zip",
+    "hash": "75ad98a99f119802cec82355e81c2a3db1d3897dbb718ae112e9a5f8b1fb92f7",
+    "depends": [
+        "sudo",
+        "tvtest"
+    ],
+    "persist": "TTRec.ini",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\TTRec.ini\")) {",
+        "    new-item \"$dir\\TTRec.ini\" -type file | out-null",
+        "}"
+    ],
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": [
+                    "sudo New-Item -Value \"$dir\\TTRec.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.ini\" -ItemType SymbolicLink",
+                    "sudo New-Item -Value \"$dir\\TTRec.tvtp_x64\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.tvtp\" -ItemType SymbolicLink"
+                ]
+            },
+            "uninstaller": {
+                "script": [
+                    "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TTRec.ini\").Delete()",
+                    "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TTRec.tvtp\").Delete()"
+                ]
+            }
+        },
+        "32bit": {
+            "installer": {
+                "script": [
+                    "sudo New-Item -Value \"$dir\\TTRec.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.ini\" -ItemType SymbolicLink",
+                    "sudo New-Item -Value \"$dir\\TTRec.tvtp\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.tvtp\" -ItemType SymbolicLink"
+                ]
+            },
+            "uninstaller": {
+                "script": [
+                    "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TTRec.ini\").Delete()",
+                    "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TTRec.tvtp\").Delete()"
+                ]
+            }
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/xtne6f/TTRec",
+        "re": "\\/releases\\/tag\\/([\\w\\-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/xtne6f/TTRec/releases/download/$version/TTRec19.zip"
+    }
+}
+
