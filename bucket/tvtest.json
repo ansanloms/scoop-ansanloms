@@ -1,11 +1,11 @@
 {
     "homepage": "https://github.com/DBCTRADO/TVTest",
-    "version": "2022-10-03",
+    "version": "2022-10-11",
     "license": "GPL",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SlashNephy/TVTest-builder/releases/download/2022-10-03/TVTest_x64_AVX.zip",
-            "hash": "7fec8039b5dec7b078fd86fae22f48ad68b3987eb592399f876a7e8c78731859",
+            "url": "https://github.com/SlashNephy/TVTest-builder/releases/download/2022-10-11/TVTest_x64_AVX.zip",
+            "hash": "bc15ee1b6fa748e6cc430d83c9484676b908772ca1095fee304caae926aba44f",
             "extract_dir": "TVTest_x64_AVX"
         }
     },
