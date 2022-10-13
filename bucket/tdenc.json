@@ -1,9 +1,9 @@
 {
     "homepage": "https://github.com/tdenc/TDEnc/",
     "description": "つんでれんこ",
-    "version": "2.99",
-    "url": "https://github.com/tdenc/TDEnc/releases/download/v2.99/TDEnc.zip",
-    "hash": "7f847b238d575bb4dfc9aba7a721714732f7ed4b1384eff838e03cdf7ab66a8a",
+    "version": "2.999",
+    "url": "https://github.com/tdenc/TDEnc/releases/download/v2.999/TDEnc.zip",
+    "hash": "1231b77a77c22c0f1d9b457bd22993b69452acf4d960eff2b862c1604c04ad99",
     "extract_dir": "TDEnc",
     "checkver": "github",
     "autoupdate": {
