@@ -1,8 +1,8 @@
 {
     "homepage": "https://github.com/xtne6f/TTRec",
-    "version": "master-161222",
-    "url": "https://github.com/xtne6f/TTRec/releases/download/master-161222/TTRec20.zip",
-    "hash": "75ad98a99f119802cec82355e81c2a3db1d3897dbb718ae112e9a5f8b1fb92f7",
+    "version": "master-220919",
+    "url": "https://github.com/xtne6f/TTRec/releases/download/master-220919/TTRec20.zip",
+    "hash": "13cf0234133ca7f070fd730f6f0fb368de37d934d0a057f9f4a622609e96ee65",
     "depends": [
         "sudo",
         "tvtest"
@@ -51,4 +51,3 @@
         "url": "https://github.com/xtne6f/TTRec/releases/download/$version/TTRec20.zip"
     }
 }
-
