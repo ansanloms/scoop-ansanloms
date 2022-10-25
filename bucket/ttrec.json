@@ -18,7 +18,7 @@
             "installer": {
                 "script": [
                     "sudo New-Item -Value \"$dir\\TTRec.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.ini\" -ItemType SymbolicLink",
-                    "sudo New-Item -Value \"$dir\\TTRec.tvtp_x64\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.tvtp\" -ItemType SymbolicLink"
+                    "sudo New-Item -Value \"$dir\\x64\\TTRec.tvtp\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.tvtp\" -ItemType SymbolicLink"
                 ]
             },
             "uninstaller": {
@@ -32,7 +32,7 @@
             "installer": {
                 "script": [
                     "sudo New-Item -Value \"$dir\\TTRec.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.ini\" -ItemType SymbolicLink",
-                    "sudo New-Item -Value \"$dir\\TTRec.tvtp\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.tvtp\" -ItemType SymbolicLink"
+                    "sudo New-Item -Value \"$dir\\x86\\TTRec.tvtp\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TTRec.tvtp\" -ItemType SymbolicLink"
                 ]
             },
             "uninstaller": {
