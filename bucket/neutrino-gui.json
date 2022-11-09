@@ -1,0 +1,25 @@
+{
+    "homepage": "https://github.com/sigprogramming/tyouseisientool",
+    "version": "1.8.0.0-beta4",
+    "license": "https://github.com/neutrinojs/neutrino/blob/master/LICENSE",
+    "url": "https://github.com/sigprogramming/tyouseisientool/releases/download/v1.8.0.0-beta4/NEUTRINOTyouseiSienTool-v1.8.0.0-beta4.zip",
+    "extract_dir": "NEUTRINOTyouseiSienTool-v1.8.0.0-beta4",
+    "hash": "2827347a4698d2ddb639504dd96e3c2813b1e2706d0bec9ded5a6e3bad3dfcc0",
+    "depends": [
+        "neutrino"
+    ],
+    "shortcuts": [
+        [
+            "NEUTRINOTyouseiSienTool.exe",
+            "NEUTRINO 調声支援ツール"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/sigprogramming/tyouseisientool",
+        "re": "\\/releases\\/tag\\/v([\\w\\-\\.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/sigprogramming/tyouseisientool/releases/download/v$version/NEUTRINOTyouseiSienTool-v$version.zip",
+        "extract_dir": "NEUTRINOTyouseiSienTool-v$version"
+    }
+}

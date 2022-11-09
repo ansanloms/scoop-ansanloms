@@ -1,0 +1,12 @@
+{
+    "homepage": "https://studio-neutrino.com/",
+    "version": "1.2.1",
+    "license": "https://github.com/neutrinojs/neutrino/blob/master/LICENSE",
+    "url": "https://drive.google.com/uc?export=download&id=1NL_LhYwRL0Z7M3g3PKhLcsqGAKksjBId&confirm=t/#neutrino.zip",
+    "hash": "405fe3d2db8ab9af403c20a8f80e2f3457c448c46ea2d2abb2c2bee6d87867c4",
+    "extract_dir": "NEUTRINO",
+    "persist": [
+        "model"
+    ]
+}
+
