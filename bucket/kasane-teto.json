@@ -2,17 +2,16 @@
   "homepage": "http://kasaneteto.jp/",
   "description": "UTAU音源ライブラリ 重音テト",
   "version": "110401",
-  "license": {
-    "url": "http://kasaneteto.jp/guide_ongen.html"
-  },
+  "license": "http://kasaneteto.jp/guide_ongen.html",
   "url": "http://kasaneteto.jp/ongendl/index.cgi/renzoku/TETO-tougou-110401.zip",
-  "hash": "028a0f042fce6fb7314d6ba45b35c4e6aa01bf95f3dc6aea99eb21458461fb49",
+  "hash": "ee06bce8c3eb21e3fa2d31db24d6b3735d6a7acbc0494723506fac9e033f7e64",
+  "extract_dir": "重音テト音声ライブラリー",
   "depends": [
     "sudo",
     "utau"
   ],
   "installer": {
-    "script": "sudo New-Item -Value \"$dir\\重音テト音声ライブラリー\" -Path \"$scoopdir\\apps\\utau\\current\\voice\" -Name \"$app\" -ItemType SymbolicLink"
+    "script": "sudo New-Item -Value \"$dir\" -Path \"$scoopdir\\apps\\utau\\current\\voice\" -Name \"$app\" -ItemType SymbolicLink"
   },
   "uninstaller": {
     "script": "(Get-Item \"$scoopdir\\apps\\utau\\current\\voice\\$app\").Delete()"
