@@ -1,0 +1,37 @@
+{
+    "homepage": "https://github.com/yuru7/udev-gothic",
+    "description": "UDEV Gothic は、ユニバーサルデザインフォントのBIZ UDゴシックと、 開発者向けフォントの JetBrains Mono を合成した、プログラミング向けフォントです。",
+    "version": "1.1.0",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/yuru7/udev-gothic/blob/main/LICENSE"
+    },
+    "url": "https://github.com/yuru7/udev-gothic/releases/download/v1.1.0/UDEVGothic_v1.1.0.zip",
+    "hash": "959f4a687ce960ba8f67ce323843c119373a923c1b6216c944bf34c8a641536e",
+    "checkver": {
+        "github": "https://github.com/yuru7/udev-gothic"
+    },
+    "autoupdate": {
+        "url": "https://github.com/yuru7/udev-gothic/releases/download/v$version/UDEVGothic_v$version.zip"
+    },
+    "depends": "sudo",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem -Recurse $dir -filter '*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem -Recurse $dir -filter '*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The PlemolJP has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
