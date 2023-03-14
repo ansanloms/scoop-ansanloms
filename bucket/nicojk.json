@@ -1,8 +1,8 @@
 {
     "homepage": "https://github.com/xtne6f/NicoJK",
-    "version": "master-230225",
-    "url": "https://github.com/xtne6f/NicoJK/releases/download/master-230225/NicoJK-master-bin.zip",
-    "hash": "bc0f03fbbb64f825b04ece863d50a9b4cc1b9e0f531bd530079af22cd335a983",
+    "version": "master-230314",
+    "url": "https://github.com/xtne6f/NicoJK/releases/download/master-230314/NicoJK-master-bin.zip",
+    "hash": "aef9fa7900d7395f159a75e75cbb650795ae12fb3268b8c779c2b2cc717bc3e9",
     "depends": [
         "sudo",
         "tvtest"
