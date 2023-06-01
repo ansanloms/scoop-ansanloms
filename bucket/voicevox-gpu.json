@@ -1,0 +1,20 @@
+{
+    "homepage": "https://voicevox.hiroshiba.jp/",
+    "description": "無料で使える中品質なテキスト読み上げソフトウェア、VOICEVOXのエディター",
+    "version": "0.14.6",
+    "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.14.6/voicevox-windows-directml-0.14.6.zip",
+    "extract_dir": "VOICEVOX",
+    "hash": "74b4460046037cbf1df4b9aacd3552dc5b01594e7606eca402ab41a13c5c8343",
+    "shortcuts": [
+        [
+            "VOICEVOX.exe",
+            "VOICEVOX"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/VOICEVOX/voicevox"
+    },
+    "autoupdate": {
+        "url": "https://github.com/VOICEVOX/voicevox/releases/download/$version/voicevox-windows-directml-$version.zip"
+    }
+}
