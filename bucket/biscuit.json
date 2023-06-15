@@ -1,9 +1,9 @@
 {
     "homepage": "https://eatbiscuit.com/",
     "description": "Biscuit | A browser so your apps don't get buried in tabs",
-    "version": "1.2.27",
-    "url": "https://github.com/agata/dl.biscuit/releases/download/v1.2.27/Biscuit-Setup-1.2.27.exe/#dl.7z",
-    "hash": "eb7cac0790bb13a3c35dec0fab5b03399a6704fcc3043e419fbe32b895bf9b5b",
+    "version": "1.2.28",
+    "url": "https://github.com/agata/dl.biscuit/releases/download/v1.2.28/Biscuit-Setup-1.2.28.exe/#dl.7z",
+    "hash": "b76855da595ee9acad70a20efcf96992d390a04c8d46364bf124397fe61e87a6",
     "extract_dir": "$PLUGINSDIR",
     "depends": "7zip",
     "architecture": {
