@@ -1,13 +1,11 @@
 {
     "homepage": "https://github.com/sigprogramming/tyouseisientool",
-    "version": "1.8.0.0-beta4",
+    "version": "1.8.0.0",
     "license": "https://github.com/neutrinojs/neutrino/blob/master/LICENSE",
-    "url": "https://github.com/sigprogramming/tyouseisientool/releases/download/v1.8.0.0-beta4/NEUTRINOTyouseiSienTool-v1.8.0.0-beta4.zip",
-    "extract_dir": "NEUTRINOTyouseiSienTool-v1.8.0.0-beta4",
-    "hash": "2827347a4698d2ddb639504dd96e3c2813b1e2706d0bec9ded5a6e3bad3dfcc0",
-    "depends": [
-        "neutrino"
-    ],
+    "url": "https://github.com/sigprogramming/tyouseisientool/releases/download/v1.8.0.0/NEUTRINOTyouseiSienTool-v1.8.0.0.zip",
+    "extract_dir": "NEUTRINOTyouseiSienTool-v1.8.0.0",
+    "hash": "7ab643b9ecb467b3aa3d4e660c4cb8c34895e83d5088efa76ab18b5d5e2d257e",
+    "depends": "neutrino",
     "shortcuts": [
         [
             "NEUTRINOTyouseiSienTool.exe",
