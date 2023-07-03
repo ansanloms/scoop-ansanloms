@@ -1,0 +1,36 @@
+{
+    "homepage": "https://github.com/yuru7/juisee",
+    "description": "Juisee は、欧文フォント JuliaMono と日本語フォント LINE Seed JP を合成したプログラミング向けフォントです。",
+    "version": "0.0.3",
+    "license": "SIL Open Font License, Version 1.1",
+    "url": "https://github.com/yuru7/juisee/releases/download/v0.0.3/Juisee_v0.0.3.zip",
+    "extract_dir": "Juisee_v0.0.3",
+    "hash": "87725656b1e3cae9b097454269ce4c2828e2019290fd3752013071421a48bc7b",
+    "checkver": {
+        "github": "https://github.com/yuru7/juisee"
+    },
+    "autoupdate": {
+        "url": "https://github.com/yuru7/juisee/releases/download/v$version/Juisee_v$version.zip",
+        "extract_dir": "Juisee_v$version"
+    },
+    "depends": "sudo",
+    "installer": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The Cica has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
