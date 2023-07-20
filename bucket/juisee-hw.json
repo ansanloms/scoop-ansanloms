@@ -4,14 +4,14 @@
     "version": "0.0.4",
     "license": "SIL Open Font License, Version 1.1",
     "url": "https://github.com/yuru7/juisee/releases/download/v0.0.4/Juisee_HW_v0.0.4.zip",
-    "extract_dir": "Juisee_v0.0.4",
+    "extract_dir": "Juisee_HW_v0.0.4",
     "hash": "75c1b3db77e379800e4338d41efa8b48cc1b42f0d31645cc1c7c2f327906db11",
     "checkver": {
         "github": "https://github.com/yuru7/juisee"
     },
     "autoupdate": {
         "url": "https://github.com/yuru7/juisee/releases/download/v$version/Juisee_HW_v$version.zip",
-        "extract_dir": "Juisee_v$version"
+        "extract_dir": "Juisee_HW_v$version"
     },
     "depends": "sudo",
     "installer": {
