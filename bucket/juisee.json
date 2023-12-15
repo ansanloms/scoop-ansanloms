@@ -1,11 +1,11 @@
 {
     "homepage": "https://github.com/yuru7/juisee",
     "description": "Juisee は、欧文フォント JuliaMono と日本語フォント LINE Seed JP を合成したプログラミング向けフォントです。",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "license": "SIL Open Font License, Version 1.1",
-    "url": "https://github.com/yuru7/juisee/releases/download/v0.0.5/Juisee_v0.0.5.zip",
-    "extract_dir": "Juisee_v0.0.5",
-    "hash": "fe34a215c1814afdc24b3fa3131d13c7deb2e5625097ce47fa884580eb1983d6",
+    "url": "https://github.com/yuru7/juisee/releases/download/v0.0.6/Juisee_v0.0.6.zip",
+    "extract_dir": "Juisee_v0.0.6",
+    "hash": "115199889d6f52141e374eda4ec8394dd5068592a51a1c4174aac68224481c79",
     "checkver": {
         "github": "https://github.com/yuru7/juisee"
     },
