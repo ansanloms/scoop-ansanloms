@@ -1,11 +1,11 @@
 {
     "homepage": "https://github.com/yuru7/bizin-gothic",
     "description": "Bizin Gothic は、ユニバーサルデザインフォントの BIZ UDゴシック と英文フォント Inconsolata を合成したプログラミング向けフォントです。",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "license": "OFL-1.1 license",
-    "url": "https://github.com/yuru7/bizin-gothic/releases/download/v0.0.3/BizinGothicDiscord_v0.0.3.zip",
-    "extract_dir": "BizinGothicDiscord_v0.0.3",
-    "hash": "2ce13a71deeea0e91e14b5c831e78d95c310132241e75931a50fa0c638ebab6a",
+    "url": "https://github.com/yuru7/bizin-gothic/releases/download/v0.0.4/BizinGothicDiscord_v0.0.4.zip",
+    "extract_dir": "BizinGothicDiscord_v0.0.4",
+    "hash": "54e02ce9fe90073da7b07f59cbee87dac097271bec85c28bfd61283653849c66",
     "checkver": {
         "github": "https://github.com/yuru7/bizin-gothic"
     },
