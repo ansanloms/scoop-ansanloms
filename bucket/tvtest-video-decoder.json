@@ -1,14 +1,14 @@
 {
     "homepage": "https://github.com/DBCTRADO/TVTestVideoDecoder",
-    "version": "2024-07-23",
+    "version": "2024-07-24",
     "depends": [
         "sudo",
         "tvtest"
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SlashNephy/TVTest-builder/releases/download/2024-07-23/TVTestVideoDecoder_x64.zip",
-            "hash": "88ad2357c6307540efcfd374c40d7ca616284f34092c5d0513c8ab1cead41dde",
+            "url": "https://github.com/SlashNephy/TVTest-builder/releases/download/2024-07-24/TVTestVideoDecoder_x64.zip",
+            "hash": "48ba506f6c759eea801c5a9f4958574b43f2b36667b3edfc3bff2bf8aaa16062",
             "extract_dir": "TVTestVideoDecoder_x64",
             "installer": {
                 "script": "sudo New-Item -Value \"$dir\\TVTestVideoDecoder.ax\" -Path \"$scoopdir\\apps\\tvtest\\current\" -Name \"TVTestVideoDecoder.ax\" -ItemType SymbolicLink"
