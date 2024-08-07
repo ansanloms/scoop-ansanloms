@@ -1,0 +1,14 @@
+{
+    "homepage": "https://github.com/urin/moove",
+    "description": "Manipulate file names and locations using any text editor.",
+    "version": "0.2.7",
+    "url": "https://github.com/urin/moove/releases/download/v0.2.7/moove-windows-x86_64.tar.gz",
+    "hash": "d1d936af7bfc0157fe6c99a2b6243b9c0955b0e9856930d2a3b00bb3734405e2",
+    "bin": "moove.exe",
+    "checkver": {
+        "github": "https://github.com/urin/moove"
+    },
+    "autoupdate": {
+        "url": "https://github.com/urin/moove/releases/download/v$version/moove-windows-x86_64.tar.gz"
+    }
+}
