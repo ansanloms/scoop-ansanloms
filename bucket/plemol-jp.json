@@ -2,20 +2,20 @@
     "$schema": "../scoop/schema.json",
     "homepage": "https://github.com/yuru7/PlemolJP",
     "description": "IBM Plex Mono と IBM Plex Sans JP を合成したプログラミングフォント PlemolJP (プレモル ジェイピー)",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "license": {
         "identifier": "Freeware",
         "url": "https://github.com/yuru7/PlemolJP/blob/main/LICENSE.txt"
     },
     "url": [
-        "https://github.com/yuru7/PlemolJP/releases/download/v2.0.2/PlemolJP_HS_v2.0.2.zip",
-        "https://github.com/yuru7/PlemolJP/releases/download/v2.0.2/PlemolJP_NF_v2.0.2.zip",
-        "https://github.com/yuru7/PlemolJP/releases/download/v2.0.2/PlemolJP_v2.0.2.zip"
+        "https://github.com/yuru7/PlemolJP/releases/download/v2.0.3/PlemolJP_HS_v2.0.3.zip",
+        "https://github.com/yuru7/PlemolJP/releases/download/v2.0.3/PlemolJP_NF_v2.0.3.zip",
+        "https://github.com/yuru7/PlemolJP/releases/download/v2.0.3/PlemolJP_v2.0.3.zip"
     ],
     "hash": [
-        "1f309e1247609d116f5cbc2ed01b1a269b4642105798f6507fa4e09a1844483d",
-        "9f41c4928f1f18b996fd998af9c474bc521703c3a83c01ec0fc014cc1d9640f7",
-        "a1767a4e527a0a2e9b143acbe2074aace98c9985cb21cb84801fed4a7ce7599f"
+        "6a1e5667cc06f805a48b8f2d73448f229d80ecbaf09c273fff6197d60c910978",
+        "cc1496750d14c0e113019b3da00e5f11a97f6de20a025ca69242a5127970a2ff",
+        "9a95404b4dea7adf77e3b487f41d6914e3de594cb38e3abd6547c587a18b6a6b"
     ],
     "checkver": {
         "github": "https://github.com/yuru7/PlemolJP"
