@@ -14,6 +14,23 @@
             "hash": "5e08f86140631ae6ab67e9cfea178d522976986c1f171f686edd1e1e68d9fbc7"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\prefs.json\")) {",
+        "    new-item \"$dir\\TVCaptionMod2.ini\" -type file | out-null",
+        "}",
+        "if (!(Test-Path \"$dir\\prefs.json\")) {",
+        "    new-item \"$dir\\prefs.json\" -type file | out-null",
+        "}"
+    ],
+    "persist": [
+        "Logs",
+        "Plugins",
+        "Resamplers",
+        "Singers",
+        "Templates",
+        "Wavtools",
+        "prefs.json"
+    ],
     "checkver": {
         "url": "https://github.com/stakira/OpenUtau/releases",
         "regex": "\\/releases\\/tag\\/build%2F(?:v|V)?([\\d.]+)"
@@ -28,15 +45,6 @@
             }
         }
     },
-    "persist": [
-        "Logs",
-        "Plugins",
-        "Resamplers",
-        "Singers",
-        "Templates",
-        "Wavtools",
-        "prefs.json"
-    ],
     "shortcuts": [
         [
             "OpenUtau.exe",
