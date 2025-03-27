@@ -13,7 +13,6 @@
         "url": "https://github.com/yuru7/juisee/releases/download/v$version/Juisee_v$version.zip",
         "extract_dir": "Juisee_v$version"
     },
-    "depends": "sudo",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",

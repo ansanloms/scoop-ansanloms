@@ -13,7 +13,6 @@
         "url": "https://github.com/yuru7/bizin-gothic/releases/download/v$version/BizinGothic_v$version.zip",
         "extract_dir": "BizinGothic_v$version"
     },
-    "depends": "sudo",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",

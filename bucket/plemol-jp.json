@@ -27,7 +27,6 @@
             "https://github.com/yuru7/PlemolJP/releases/download/v$version/PlemolJP_v$version.zip"
         ]
     },
-    "depends": "sudo",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",

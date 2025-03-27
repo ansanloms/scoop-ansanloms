@@ -14,7 +14,6 @@
     "autoupdate": {
         "url": "https://github.com/miiton/Cica/releases/download/v$version/Cica_v$version.zip"
     },
-    "depends": "sudo",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
