@@ -1,0 +1,17 @@
+{
+    "homepage": "https://github.com/kyoh86/zenhan",
+    "description": "A command-line tool to switch the IME (Input Method Editor) mode on Windows. Similar to im-select.",
+    "version": "0.0.1",
+    "license": {
+        "url": "https://github.com/kyoh86/zenhan?tab=Unlicense-1-ov-file"
+    },
+    "url": "https://github.com/kyoh86/zenhan/releases/download/v0.0.1/zenhan.exe",
+    "hash": "1b3ab1c2cf7047fd72c71eae0cd565edb59998ac1d87d281794ad8b4bde08bf4",
+    "bin": "zenhan.exe",
+    "checkver": {
+        "github": "https://github.com/kyoh86/zenhan"
+    },
+    "autoupdate": {
+        "url": "https://github.com/kyoh86/zenhan/releases/download/v$version/zenhan.exe"
+    }
+}
