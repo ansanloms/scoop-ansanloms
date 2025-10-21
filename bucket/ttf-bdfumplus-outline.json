@@ -1,13 +1,13 @@
 {
     "homepage": "https://bitbucket.org/hikaen2/ttf-bdfumplus-outline/",
     "description": "BDF UM+ Outline - A TrueType bitmap font",
-    "version": "20200628",
+    "version": "20251021",
     "license": {
         "identifier": "Freeware",
         "url": "http://mplus-fonts.osdn.jp/mplus-bitmap-fonts/#license"
     },
-    "url": "https://github.com/hikaen2/ttf-bdfumplus-outline/releases/download/20200628/ttf-bdfumplus-outline-20200628.zip",
-    "hash": "91a0ade9a603a6c01b1976021218e3facbff411ec45f05b5112b2446f86470e6",
+    "url": "https://github.com/hikaen2/ttf-bdfumplus-outline/releases/download/20251021/ttf-bdfumplus-outline-20251021.zip",
+    "hash": "81579f037280a66d0f89996b1caae7819c31e73bb30f049880781b455e0e6c96",
     "checkver": {
         "github": "https://github.com/hikaen2/ttf-bdfumplus-outline"
     },
@@ -15,9 +15,7 @@
         "url": "https://github.com/hikaen2/ttf-bdfumplus-outline/releases/download/$version/ttf-bdfumplus-outline-$version.zip",
         "extract_dir": "ttf-bdfumplus-outline-$version"
     },
-    "depends": [
-        "sudo"
-    ],
+    "depends": "sudo",
     "installer": {
         "script": [
             "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop install $app'\"; exit 1 }",
