@@ -1,10 +1,10 @@
 {
     "homepage": "http://spring-fragrance.mints.ne.jp/aviutl/",
     "description": "AviUtl ExEdit2",
-    "version": "beta38",
+    "version": "beta39",
     "license": "Freeware",
-    "url": "http://spring-fragrance.mints.ne.jp/aviutl/aviutl2beta38.zip",
-    "hash": "2e02957c82dbe5267e3aabaca2cc90b252e08f65b48f59f5e589de078164d9a0",
+    "url": "http://spring-fragrance.mints.ne.jp/aviutl/aviutl2beta39.zip",
+    "hash": "589068cf14b4305d6a91519dd7f609363e2e1ed6096c3222e39fa09f6dff0dfb",
     "shortcuts": [
         [
             "aviutl2.exe",
