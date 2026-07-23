@@ -1,16 +1,14 @@
 {
     "homepage": "https://github.com/Chinachu/BonDriver_Mirakurun",
-    "version": "1.5",
+    "version": "2.0",
     "license": "MIT",
-    "url": "https://github.com/Chinachu/BonDriver_Mirakurun/releases/download/v1.5/BonDriver_Mirakurun_v1.5.zip",
-    "hash": "118c10d82d55e10fe3e86a3e0fd3bdca0c28d324ba81bc74af98af654fbf9116",
+    "url": "https://github.com/Chinachu/BonDriver_Mirakurun/releases/download/v2.0/BonDriver_Mirakurun_v2.0.zip",
+    "hash": "ef1c6fc99b0eaaa4eefeecb1adae1296790f0eab4996c8b3675c80fd1b883eb1",
     "persist": [
         "x64\\BonDriver_Mirakurun.ini",
         "x86\\BonDriver_Mirakurun.ini"
     ],
-    "depends": [
-        "tvtest"
-    ],
+    "depends": "tvtest",
     "architecture": {
         "64bit": {
             "installer": {
