@@ -1,0 +1,57 @@
+{
+    "homepage": "https://github.com/oov/aviutl2_psdtoolkit2",
+    "description": "PSDToolKit for AviUtl ExEdit2",
+    "version": "2.0.0alpha10",
+    "license": "MIT",
+    "url": "https://github.com/oov/aviutl2_psdtoolkit2/releases/download/v2.0.0alpha10/psdtoolkit_v2.0.0alpha10.au2pkg.zip",
+    "hash": "4f010f92288f012bd018b8a8428e0e4ce8881f874b3568ee5500b41a4ec64f88",
+    "depends": [
+        "aviutl2",
+        "gcmzdrops2"
+    ],
+    "persist": "Plugin\\PSDToolKit\\PSDToolKit.user.ini",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Plugin\\PSDToolKit\\PSDToolKit.user.ini\")) {",
+        "    New-Item -ItemType Directory -Force -Path \"$persist_dir\\Plugin\\PSDToolKit\" | Out-Null",
+        "    New-Item -ItemType File -Path \"$persist_dir\\Plugin\\PSDToolKit\\PSDToolKit.user.ini\" | Out-Null",
+        "}"
+    ],
+    "installer": {
+        "script": [
+            "New-Item -ItemType Directory -Force -Path \"$env:ProgramData\\aviutl2\\Plugin\", \"$env:ProgramData\\aviutl2\\Script\", \"$env:ProgramData\\aviutl2\\Alias\", \"$env:ProgramData\\aviutl2\\Language\" | Out-Null",
+            "$links = @{ \"$env:ProgramData\\aviutl2\\Plugin\\PSDToolKit\" = \"$dir\\Plugin\\PSDToolKit\"; \"$env:ProgramData\\aviutl2\\Script\\PSDToolKit\" = \"$dir\\Script\\PSDToolKit\" }",
+            "foreach ($link in @($links.Keys)) {",
+            "    $item = Get-Item -LiteralPath $link -Force -ErrorAction SilentlyContinue",
+            "    if ($item -and ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint)) { try { [System.IO.Directory]::Delete($link); $item = $null } catch { Write-Warning \"Failed to remove stale junction ${link}: $_\" } }",
+            "    if ($item) { Write-Warning \"$link exists and is not a junction; leaving it untouched. PSDToolKit was not linked there.\" } else { New-Item -ItemType Junction -Path $link -Value $links[$link] | Out-Null }",
+            "}",
+            "Get-ChildItem \"$dir\\Alias\" -File | Copy-Item -Destination \"$env:ProgramData\\aviutl2\\Alias\"",
+            "Get-ChildItem \"$dir\\Language\" -File | Copy-Item -Destination \"$env:ProgramData\\aviutl2\\Language\""
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "foreach ($link in @(\"$env:ProgramData\\aviutl2\\Plugin\\PSDToolKit\", \"$env:ProgramData\\aviutl2\\Script\\PSDToolKit\")) {",
+            "    $item = Get-Item -LiteralPath $link -Force -ErrorAction SilentlyContinue",
+            "    if (!$item) { continue }",
+            "    if ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint) { try { [System.IO.Directory]::Delete($link) } catch { Write-Warning \"Failed to remove junction ${link}: $_\" } } else { Write-Warning \"$link is not a junction; not removed.\" }",
+            "}",
+            "Get-ChildItem \"$dir\\Alias\" -File | ForEach-Object { Remove-Item -LiteralPath \"$env:ProgramData\\aviutl2\\Alias\\$($_.Name)\" -Force -ErrorAction SilentlyContinue }",
+            "Get-ChildItem \"$dir\\Language\" -File | ForEach-Object { Remove-Item -LiteralPath \"$env:ProgramData\\aviutl2\\Language\\$($_.Name)\" -Force -ErrorAction SilentlyContinue }"
+        ]
+    },
+    "notes": [
+        "PSDToolKit is installed into %ProgramData%\\aviutl2 as junctions (Plugin\\PSDToolKit, Script\\PSDToolKit) and copied files (Alias\\*, Language\\*), bypassing the package manager of AviUtl ExEdit2. Uninstall with scoop, not from the package info dialog.",
+        "Alias and Language files are copies, not links; local edits to them are discarded on update.",
+        "User settings belong in %ProgramData%\\aviutl2\\Plugin\\PSDToolKit\\PSDToolKit.user.ini, which is persisted across updates.",
+        "Requires AviUtl ExEdit2 2.0beta30a or later and GCMZDrops v2.0.0beta1 or later. scoop does not enforce version floors; update aviutl2 and gcmzdrops2 if PSDToolKit does not load."
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/oov/aviutl2_psdtoolkit2/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "^v(.+)$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/oov/aviutl2_psdtoolkit2/releases/download/v$version/psdtoolkit_v$version.au2pkg.zip"
+    }
+}
