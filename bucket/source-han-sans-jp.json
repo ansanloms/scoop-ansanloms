@@ -10,11 +10,12 @@
     "hash": "076a167394a2bf125a7ab13164a5ea1ce529b988d867c11052e83473b2a704f1",
     "depends": "sudo",
     "checkver": {
-        "github": "https://github.com/adobe-fonts/source-han-sans",
-        "re": "/releases/tag/([\\d.]+R)"
+        "url": "https://api.github.com/repos/adobe-fonts/source-han-sans/releases/latest",
+        "jsonpath": "$.assets[?(@.name =~ /SourceHanSansJP\\.zip$/)].browser_download_url",
+        "regex": "download/([\\d.]+R)/(?<filename>[^\"]+)$"
     },
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/$version/17_SourceHanSansJP.zip"
+        "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/$version/$matchFilename"
     },
     "installer": {
         "script": [
