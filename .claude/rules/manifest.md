@@ -54,7 +54,14 @@ manifest を書く前に、上流について次を実測して確定する。�
 
 ## 検証
 
-WSL の pwsh (`/usr/bin/pwsh`) で、リポジトリ直下から実行する。隔離 worktree では `scoop/` submodule が空なので、先に `git submodule update --init` を実行する。新規 manifest は untracked のため、検証前に `git add bucket/<name>.json` で index に載せてから `git diff` を見る (untracked のままだと diff が常に空になり、ツールによる書き換えを検出できない)。既存 manifest は改行コードが CRLF で、新規 manifest も CRLF で保存する。Linux の pwsh で `formatjson.ps1` や `checkver.ps1 -u` を実行すると末尾の改行が LF に書き換わり `git diff` に 1 hunk 出るので、その hunk は無視し、コミット前に CRLF へ戻す (`unix2dos` 等)。CI は Windows で `formatjson.ps1` を実行して比較するため、LF のままだと lint で落ちる (`.gitattributes` は未整備なので手で保つ)。Windows 実機での `scoop install` は WSL では検証できないので、報告に「未検証」と明記する。
+WSL の pwsh (`/usr/bin/pwsh`) で、リポジトリ直下から実行する。隔離 worktree では `scoop/` submodule が空なので、先に `git submodule update --init` を実行する。新規 manifest は untracked のため、検証前に `git add bucket/<name>.json` で index に載せてから `git diff` を見る (untracked のままだと diff が常に空になり、ツールによる書き換えを検出できない)。既存 manifest は改行コードが CRLF で、新規 manifest も CRLF で保存する。Linux の pwsh で `formatjson.ps1` や `checkver.ps1 -u` を実行すると末尾の改行が LF に書き換わり `git diff` に 1 hunk 出るので、その hunk は無視し、コミット前に CRLF へ戻す (`unix2dos` 等)。CI は Windows で `formatjson.ps1` を実行して比較するため、LF のままだと lint で落ちる (`.gitattributes` は未整備なので手で保つ)。
+
+Windows 実機での `scoop install` / `scoop uninstall` は、WSL の interop 経由で Windows 側の Scoop を呼んで検証する (`cmd.exe /c "scoop --version"` で到達できることを先に確認する)。検証できなかった場合のみ、報告に「未検証」と明記する。
+
+- Windows 側のコマンドは cwd を `/mnt/c/` 配下に置いて実行する。cwd が `\\wsl.localhost\...` だと cmd.exe が UNC 非対応の警告を出す。
+- manifest を Windows 側のパス (例: `C:\Users\<user>\AppData\Local\Temp\<name>.json`) にコピーし、`cmd.exe /c "scoop install <その Windows パス>"` で入れる。ローカル json から入れた app は bucket に追従しないので、検証後は `scoop uninstall <name>` で戻し、マージ後に `scoop install ansanloms/<name>` で入れ直す。
+- `sudo` が要る manifest は `cmd.exe /c "sudo scoop install ..."` で Windows 組み込みの `sudo.exe` が UAC を出す。人が UAC に応答するまで待つので `timeout` を長めに取る。非管理者で実行すると installer のガードで止まるが、Scoop 側に "Install failed" のエントリが残るため、`scoop uninstall <name>` で掃除してから昇格して入れ直す。
+- レジストリの確認は `reg.exe query "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"` を WSL から直接呼ぶ。`cmd.exe /c 'reg query "..."'` で包むと `Windows NT` の空白で引用が壊れ、構文エラーになる。
 
 ```sh
 pwsh -File ./scoop/bin/checkver.ps1 <name> -dir ./bucket -u -f   # 実行後の git diff が末尾改行の hunk だけなら version / url / hash が autoupdate と整合
