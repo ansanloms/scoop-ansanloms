@@ -23,10 +23,7 @@
             "if ($item) { if ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint) { try { [System.IO.Directory]::Delete($link) } catch { Write-Warning \"Failed to remove junction ${link}: $_\" } } else { Write-Warning \"$link is not a junction; not removed.\" } }"
         ]
     },
-    "notes": [
-        "GCMZDrops is installed as a junction at %ProgramData%\\aviutl2\\Plugin\\GCMZDrops, bypassing the package manager of AviUtl ExEdit2. Uninstall with scoop, not from the package info dialog.",
-        "Requires AviUtl ExEdit2 2.0beta30a or later. If an older GCMZDrops was installed by other means, remove it manually first (see upstream release notes)."
-    ],
+    "notes": "If an older GCMZDrops was installed by other means, remove it manually first (see upstream release notes). Requires AviUtl ExEdit2 2.0beta30a or later; scoop installs it if missing but does not update an old one.",
     "checkver": {
         "url": "https://api.github.com/repos/oov/aviutl2_gcmzdrops2/releases",
         "jsonpath": "$[0].tag_name",

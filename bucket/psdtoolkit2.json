@@ -41,10 +41,8 @@
         ]
     },
     "notes": [
-        "PSDToolKit is installed into %ProgramData%\\aviutl2 as junctions (Plugin\\PSDToolKit, Script\\PSDToolKit) and copied files (Alias\\*, Language\\*), bypassing the package manager of AviUtl ExEdit2. Uninstall with scoop, not from the package info dialog.",
-        "Alias and Language files are copies, not links; local edits to them are discarded on update.",
-        "User settings belong in %ProgramData%\\aviutl2\\Plugin\\PSDToolKit\\PSDToolKit.user.ini, which is persisted across updates.",
-        "Requires AviUtl ExEdit2 2.0beta30a or later and GCMZDrops v2.0.0beta1 or later. scoop does not enforce version floors; update aviutl2 and gcmzdrops2 if PSDToolKit does not load."
+        "User settings belong in %ProgramData%\\aviutl2\\Plugin\\PSDToolKit\\PSDToolKit.user.ini (persisted across updates). Do not edit PSDToolKit.ini; it is replaced on update.",
+        "Requires AviUtl ExEdit2 2.0beta30a or later and GCMZDrops v2.0.0beta1 or later. scoop installs them if missing but does not update old ones."
     ],
     "checkver": {
         "url": "https://api.github.com/repos/oov/aviutl2_psdtoolkit2/releases",
