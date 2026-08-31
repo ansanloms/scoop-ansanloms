@@ -1,0 +1,30 @@
+{
+    "homepage": "https://github.com/oov/forcepser",
+    "description": "forcepser (かんしくん): watches a folder for *.wav/*.txt pairs and sends them to AviUtl via GCMZDrops",
+    "version": "1.6.0beta9",
+    "license": "MIT",
+    "url": "https://github.com/oov/forcepser/releases/download/v1.6.0beta9/forcepser_v1.6.0beta9.zip",
+    "hash": "f937a2608e314ea82503e9618dbab6032fb0f0142404312fb3f3867d9d258fc9",
+    "shortcuts": [
+        [
+            "forcepser.exe",
+            "forcepser"
+        ]
+    ],
+    "persist": "setting.txt",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\setting.txt\")) {",
+        "    New-Item -ItemType Directory -Force -Path \"$persist_dir\" | Out-Null",
+        "    New-Item -ItemType File -Path \"$persist_dir\\setting.txt\" | Out-Null",
+        "}"
+    ],
+    "notes": "Requires AviUtl 1.x with GCMZDrops (ごちゃまぜドロップス) v0.3 or later, which this bucket does not provide. setting.txt is created empty and persisted; copy the contents of setting.txt-template into %USERPROFILE%\\scoop\\persist\\forcepser\\setting.txt and edit it (UTF-8). Do not run forcepser or AviUtl as administrator.",
+    "checkver": {
+        "url": "https://api.github.com/repos/oov/forcepser/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "^v(.+)$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/oov/forcepser/releases/download/v$version/forcepser_v$version.zip"
+    }
+}
