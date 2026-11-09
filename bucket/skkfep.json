@@ -1,27 +1,32 @@
 {
-  "homepage": "http://coexe.web.fc2.com/skkfep.html",
-  "description": "SKKFEP",
-  "version": "012_20190506",
-  "url": "http://coexe.web.fc2.com/skkfep012_20190506.zip",
-  "hash": "07b6f38da994f7b655653b7b5c834f2ff8e4a0cf118d7b13f4137a97acff8307",
-  "depends": [
-    "sudo"
-  ],
-  "bin": [
-    [
-      "skkfep.cmd",
-      "skkfep"
-    ]
-  ],
-  "pre_install": [
-    "Write-Output \"@echo off\" | Add-Content \"$dir\\skkfep.cmd\" -Encoding Default",
-    "Write-Output \"cscript.exe %~dp0SETUP.js\" | Add-Content \"$dir\\skkfep.cmd\" -Encoding Default"
-  ],
-  "installer": {
-    "script": "sudo \"$dir\\skkfep.cmd\""
-  },
-  "uninstaller": {
-    "script": "sudo \"$dir\\skkfep.cmd\""
-  }
+    "homepage": "http://coexe.web.fc2.com/skkfep.html",
+    "description": "SKKFEP",
+    "license": "Unknown",
+    "version": "012_20220524",
+    "url": "http://coexe.web.fc2.com/skkfep012_20220524.zip",
+    "hash": "351f2c95484b5f92f5539114d9c406169b114edce83893dc8d3a666fda4facff",
+    "depends": "sudo",
+    "bin": [
+        [
+            "skkfep.cmd",
+            "skkfep"
+        ]
+    ],
+    "pre_install": [
+        "Write-Output \"@echo off\" | Add-Content \"$dir\\skkfep.cmd\" -Encoding Default",
+        "Write-Output \"cscript.exe %~dp0SETUP.js\" | Add-Content \"$dir\\skkfep.cmd\" -Encoding Default"
+    ],
+    "installer": {
+        "script": "sudo \"$dir\\skkfep.cmd\""
+    },
+    "uninstaller": {
+        "script": "sudo \"$dir\\skkfep.cmd\""
+    },
+    "checkver": {
+        "url": "http://coexe.web.fc2.com/programs.html",
+        "regex": "skkfep(\\d{3}_\\d{8})\\.zip"
+    },
+    "autoupdate": {
+        "url": "http://coexe.web.fc2.com/skkfep$version.zip"
+    }
 }
-
