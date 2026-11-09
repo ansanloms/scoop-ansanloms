@@ -1,12 +1,25 @@
 {
-  "homepage": "http://www.psytec.co.jp/freesoft/01/",
-  "version": "2.43",
-  "url": "http://www.psytec.co.jp/freesoft/01/PsQREdit.zip",
-  "bin": "PsQREdit.exe",
-  "shortcuts": [
-    [
-      "PsQREdit.exe",
-      "Psytec QR Code Editor"
-    ]
-  ]
+    "homepage": "https://www.psytec.co.jp/freesoft/01/",
+    "version": "2.43",
+    "description": "QR code editor that generates and decodes QR code symbols",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.psytec.co.jp/condition/"
+    },
+    "url": "https://www.psytec.co.jp/freesoft/01/PsQREdit.zip",
+    "hash": "a616f9510018e78ca8483577202b7f7e660aeb17d4de96521adbae62580533b0",
+    "bin": "PsQREdit.exe",
+    "shortcuts": [
+        [
+            "PsQREdit.exe",
+            "Psytec QR Code Editor"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.psytec.co.jp/freesoft/01/",
+        "regex": "\\d{4}/\\d\\d/\\d\\d Ver\\.([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.psytec.co.jp/freesoft/01/PsQREdit.zip"
+    }
 }
