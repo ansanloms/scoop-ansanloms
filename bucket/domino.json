@@ -1,15 +1,21 @@
 {
-  "homepage": "http://takabosoft.com/domino",
-  "description": "Domino",
-  "version": "1.43",
-  "license": "Free software",
-  "url": "http://takabosoft.com/download/win/domino/Domino143.zip",
-  "hash": "68747fc8040f3a0ae4c1172ed2b21b8899eef4e5440d7bbf33d1cbc96d059100",
-  "shortcuts": [
-    [
-      "Domino.exe",
-      "Domino"
-    ]
-  ]
+    "homepage": "https://takabosoft.com/domino",
+    "description": "Domino",
+    "version": "1.44",
+    "license": "Free software",
+    "url": "https://takabosoft.com/download/win/domino/Domino144.zip",
+    "hash": "b9dc8e51f748f4cf6888e008e85f102311dc2789d49e6cb70c62284eb32b046e",
+    "shortcuts": [
+        [
+            "Domino.exe",
+            "Domino"
+        ]
+    ],
+    "checkver": {
+        "url": "https://takabosoft.com/domino",
+        "regex": "Domino Ver\\.([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://takabosoft.com/download/win/domino/Domino$cleanVersion.zip"
+    }
 }
-

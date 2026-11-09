@@ -1,46 +1,53 @@
 {
-  "homepage": "https://github.com/xtne6f/TVCaptionMod2",
-  "version": "master-180327",
-  "license": "GPL",
-  "url": "https://github.com/xtne6f/TVCaptionMod2/releases/download/master-180327/TVCaptionMod2-23.zip",
-  "hash": "1e13d2879d8a79b4f34b380d04e50162daa650d080cf6299639e9dfca75c5c0a",
-  "depends": [
-    "sudo",
-    "tvtest"
-  ],
-  "persist": [
-    "TVCaptionMod2.ini"
-  ],
-  "pre_install": [
-    "if (!(Test-Path \"$persist_dir\\TVCaptionMod2.ini\")) {",
-    "    new-item \"$dir\\TVCaptionMod2.ini\" -type file | out-null",
-    "}",
-    "if (!(Test-Path \"$dir\\TVCaptionMod2.ini\")) {",
-    "    new-item \"$dir\\TVCaptionMod2.ini\" -type file | out-null",
-    "}"
-  ],
-  "architecture": {
-    "64bit": {
-      "installer": {
-        "script": [
-          "sudo New-Item -Value \"$dir\\TVCaptionMod2.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.ini\" -ItemType SymbolicLink",
-          "sudo New-Item -Value \"$dir\\TVCaptionMod2.tvtp_x64\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.tvtp\" -ItemType SymbolicLink"
-        ]
-      }
+    "homepage": "https://github.com/xtne6f/TVCaptionMod2",
+    "version": "master-240211",
+    "description": "Caption plugin for TVTest",
+    "license": "GPL",
+    "url": "https://github.com/xtne6f/TVCaptionMod2/releases/download/master-240211/TVCaptionMod2-31.zip",
+    "hash": "b24a4f96e9915545940e18e86c07ca0ea042ca9eacd70cd1ff51d9dc759cb8c6",
+    "depends": [
+        "sudo",
+        "tvtest"
+    ],
+    "persist": "TVCaptionMod2.ini",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\TVCaptionMod2.ini\")) {",
+        "    new-item \"$dir\\TVCaptionMod2.ini\" -type file | out-null",
+        "}",
+        "if (!(Test-Path \"$dir\\TVCaptionMod2.ini\")) {",
+        "    new-item \"$dir\\TVCaptionMod2.ini\" -type file | out-null",
+        "}"
+    ],
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": [
+                    "sudo New-Item -Value \"$dir\\TVCaptionMod2.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.ini\" -ItemType SymbolicLink",
+                    "sudo New-Item -Value \"$dir\\x64\\TVCaptionMod2.tvtp\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.tvtp\" -ItemType SymbolicLink"
+                ]
+            }
+        },
+        "32bit": {
+            "installer": {
+                "script": [
+                    "sudo New-Item -Value \"$dir\\TVCaptionMod2.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.ini\" -ItemType SymbolicLink",
+                    "sudo New-Item -Value \"$dir\\x86\\TVCaptionMod2.tvtp\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.tvtp\" -ItemType SymbolicLink"
+                ]
+            }
+        }
     },
-    "32bit": {
-      "installer": {
+    "uninstaller": {
         "script": [
-          "sudo New-Item -Value \"$dir\\TVCaptionMod2.ini\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.ini\" -ItemType SymbolicLink",
-          "sudo New-Item -Value \"$dir\\TVCaptionMod2.tvtp\" -Path \"$scoopdir\\apps\\tvtest\\current\\Plugins\" -Name \"TVCaptionMod2.tvtp\" -ItemType SymbolicLink"
+            "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TVCaptionMod2.ini\").Delete()",
+            "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TVCaptionMod2.tvtp\").Delete()"
         ]
-      }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/xtne6f/TVCaptionMod2/releases/latest",
+        "jsonpath": "$.assets[?(@.name =~ /TVCaptionMod2-\\d+\\.zip$/)].browser_download_url",
+        "regex": "download/(master-\\d+)/(?<filename>[^\"]+)$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/xtne6f/TVCaptionMod2/releases/download/$version/$matchFilename"
     }
-  },
-  "uninstaller": {
-    "script": [
-      "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TVCaptionMod2.ini\").Delete()",
-      "(Get-Item \"$scoopdir\\apps\\tvtest\\current\\Plugins\\TVCaptionMod2.tvtp\").Delete()"
-    ]
-  }
 }

@@ -1,18 +1,27 @@
 {
-  "homepage": "http://ackiesound.ifdef.jp/doc/vs4u/main.html",
-  "description": "VocalShifter for UTAU",
-  "version": "1.41",
-  "url": "http://ackiesound.ifdef.jp/data/vs4u141.zip",
-  "hash": "17d872e7ee90e58550fc35e5acd483cc9b6ebaccd8c5b6e452502f41d5e137a4",
-  "depends": [
-    "sudo",
-    "utau"
-  ],
-  "installer": {
-    "script": "sudo New-Item -Value \"$dir\\vs4u141\" -Path \"$scoopdir\\apps\\utau\\current\\engine\" -Name \"$app\" -ItemType SymbolicLink"
-  },
-  "uninstaller": {
-    "script": "(Get-Item \"$scoopdir\\apps\\utau\\current\\engine\\$app\").Delete()"
-  }
+    "homepage": "https://ackiesound.ifdef.jp/doc/vs4u/main.html",
+    "description": "VocalShifter for UTAU",
+    "license": "Freeware",
+    "version": "1.43",
+    "url": "https://ackiesound.ifdef.jp/data/vs4u143.zip",
+    "hash": "00dc6bbe24e0cc736c0ef0436d9c7371152f22fb8af82f2f908dbd601eee66cd",
+    "extract_dir": "vs4u143",
+    "depends": [
+        "sudo",
+        "utau"
+    ],
+    "installer": {
+        "script": "sudo New-Item -Value \"$dir\" -Path \"$scoopdir\\apps\\utau\\current\\engine\" -Name \"$app\" -ItemType SymbolicLink"
+    },
+    "uninstaller": {
+        "script": "(Get-Item \"$scoopdir\\apps\\utau\\current\\engine\\$app\").Delete()"
+    },
+    "checkver": {
+        "url": "https://ackiesound.ifdef.jp/download.html",
+        "regex": "VS4U ver\\.([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://ackiesound.ifdef.jp/data/vs4u$cleanVersion.zip",
+        "extract_dir": "vs4u$cleanVersion"
+    }
 }
-
