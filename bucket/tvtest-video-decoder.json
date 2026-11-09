@@ -1,6 +1,8 @@
 {
     "homepage": "https://github.com/DBCTRADO/TVTestVideoDecoder",
+    "description": "MPEG-2 video decoder for TVTest (TVTest DTV Video Decoder)",
     "version": "2026-09-13",
+    "license": "GPL-3.0-or-later",
     "depends": [
         "sudo",
         "tvtest"
@@ -19,8 +21,9 @@
         }
     },
     "checkver": {
-        "github": "https://github.com/SlashNephy/TVTest-builder",
-        "re": "\\/releases\\/tag\\/([\\w\\-]+)"
+        "url": "https://api.github.com/repos/SlashNephy/TVTest-builder/releases",
+        "jsonpath": "$[*].assets[?(@.name == 'TVTestVideoDecoder_x64.zip')].browser_download_url",
+        "regex": "download/([\\d-]+)/TVTestVideoDecoder_x64\\.zip"
     },
     "autoupdate": {
         "url": "https://github.com/SlashNephy/TVTest-builder/releases/download/$version/TVTestVideoDecoder_x64.zip"
