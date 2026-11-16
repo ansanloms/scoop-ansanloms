@@ -1,10 +1,10 @@
 {
     "homepage": "https://voicevox.hiroshiba.jp/",
     "description": "無料で使える中品質なテキスト読み上げソフトウェア、VOICEVOXのエディター",
-    "version": "0.26.2",
-    "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.26.2/voicevox-windows-cpu-0.26.2.zip",
+    "version": "0.26.3",
+    "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.26.3/voicevox-windows-cpu-0.26.3.zip",
     "extract_dir": "VOICEVOX",
-    "hash": "9d24c91fbe72f91a6a79e13a87102cb7b2139848a0d146a28d33087552538dce",
+    "hash": "e27c78f03fc1492a30f9e667074c969e0437a5404cb832cb660726617e4b1311",
     "shortcuts": [
         [
             "VOICEVOX.exe",
